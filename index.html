@@ -1483,6 +1483,47 @@ path:hover {
 
 
 
+/* CARD CENTER ALIGN */
+.uc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ICON SMALL + CENTER */
+.uc-icon img {
+  width: 60px !important;
+  height: 60px !important;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 12px auto;
+}
+
+/* ICON BOX (optional premium look) */
+.uc-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+}
+
+/* HOVER EFFECT 🔥 */
+.uc-icon img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.uc:hover .uc-icon img {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 10px orange);
+}.uc-icon {
+  background: rgba(255,255,255,0.05);
+  border-radius: 50%;
+}
+
+
+
 </style>
 </head>
 <body>
@@ -1797,11 +1838,11 @@ path:hover {
     <h3 class="display-3 reveal" style="text-align:center;margin-top:78px;margin-bottom:10px">Current &amp; <em>Upcoming</em> Markets</h3>
     <p class="lead reveal" style="text-align:center;margin-bottom:34px">Gold is live. Exciting new markets launching soon be first to access them.</p>
     <div class="upcoming-row">
-      <div class="uc glass glass-top live reveal" style="transition-delay:.05s"><span class="uc-icon"><img src="images/gold.png" width="150" height="150"></span><div class="uc-name">Gold</div><span class="status s-live">● Live Now</span><div class="uc-desc">XAUUSD &amp; MCX Gold. Highest accuracy AI bot.</div></div>
-      <div class="uc glass reveal" style="transition-delay:.1s"><span class="uc-icon"><img src="images/silver.png" width="150" height="150"></span><div class="uc-name">Silver</div><span class="status s-soon">⏳ Coming Soon</span><div class="uc-desc">XAGUSD &amp; MCX Silver. Full copy trading soon.</div></div>
-      <div class="uc glass reveal" style="transition-delay:.15s"><span class="uc-icon"><img src="images/crypto.png" width="150" height="150"></span><div class="uc-name">Crypto</div><span class="status s-soon">⏳ Coming Soon</span><div class="uc-desc">BTC, ETH &amp; top altcoins. 24/7 bot strategies.</div></div>
-      <div class="uc glass reveal" style="transition-delay:.2s"><span class="uc-icon"><img src="images/indices.png" width="150" height="150"></span><div class="uc-name">Indices</div><span class="status s-soon">⏳ Coming Soon</span><div class="uc-desc">Nifty 50, Bank Nifty, US30, NASDAQ.</div></div>
-      <div class="uc glass reveal" style="transition-delay:.25s"><span class="uc-icon"><img src="images/commodities.png" width="150" height="150"></span><div class="uc-name">Commodities</div><span class="status s-soon">⏳ Coming Soon</span><div class="uc-desc">Crude Oil, Natural Gas &amp; more.</div></div>
+      <div class="uc glass glass-top live reveal" style="transition-delay:.05s"><span class="uc-icon"><img src="images/gold.png"></span><div class="uc-name">Gold</div><span class="status s-live">● Live Now</span><div class="uc-desc">XAUUSD &amp; MCX Gold. Highest accuracy AI bot.</div></div>
+      <div class="uc glass reveal" style="transition-delay:.1s"><span class="uc-icon"><img src="images/silver.png"></span><div class="uc-name">Silver</div><span class="status s-soon">⏳ Coming Soon</span><div class="uc-desc">XAGUSD &amp; MCX Silver. Full copy trading soon.</div></div>
+      <div class="uc glass reveal" style="transition-delay:.15s"><span class="uc-icon"><img src="images/crypto.png"></span><div class="uc-name">Crypto</div><span class="status s-soon">⏳ Coming Soon</span><div class="uc-desc">BTC, ETH &amp; top altcoins. 24/7 bot strategies.</div></div>
+      <div class="uc glass reveal" style="transition-delay:.2s"><span class="uc-icon"><img src="images/indices.png"></span><div class="uc-name">Indices</div><span class="status s-soon">⏳ Coming Soon</span><div class="uc-desc">Nifty 50, Bank Nifty, US30, NASDAQ.</div></div>
+      <div class="uc glass reveal" style="transition-delay:.25s"><span class="uc-icon"><img src="images/commodities.png"></span><div class="uc-name">Commodities</div><span class="status s-soon">⏳ Coming Soon</span><div class="uc-desc">Crude Oil, Natural Gas &amp; more.</div></div>
     </div>
   </div>
 </section>
@@ -1898,7 +1939,7 @@ path:hover {
         <div class="link-card glass glass-top">
           <h4>🔗 Your Share Link</h4>
           <div class="link-row">
-            <span id="rlink">trademantra.com/ref/YOUR_ID</span>
+            <span id="rlink">Copy2Boat.com/ref/YOUR_ID</span>
             <button class="copy-btn" onclick="cpL()">Copy</button>
           </div>
           <p style="font-size:.74rem;color:var(--grey2);margin-bottom:18px">Sign up first to get your unique link. Share on WhatsApp, Instagram, Telegram, YouTube.</p>
