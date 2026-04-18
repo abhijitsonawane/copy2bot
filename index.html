@@ -1522,7 +1522,168 @@ path:hover {
   border-radius: 50%;
 }
 
+.big-card {
+  max-width: 320px;
+  padding: 25px;
+  border: 1px solid rgba(0,255,150,0.2);
+}
 
+.info-box {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255,0,0,0.08);
+  border: 1px solid rgba(255,0,0,0.3);
+  font-size: 12px;
+  text-align: left;
+}
+
+.info-box div {
+  margin: 4px 0;
+}
+
+.broker-logos {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.broker-logos img {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+}
+
+.join-btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(90deg,#ff7a18,#ff3d00);
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.join-btn:hover {
+  opacity: 0.9;
+}
+.upcoming-row {
+  display: flex;
+  justify-content: center;   /* center align */
+  align-items: stretch;      /* same height */
+  gap: 25px;
+  flex-wrap: wrap;
+}
+.uc {
+  width: 260px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.big-card {
+  width: 280px;
+  min-height: 420px;
+}
+.info-box {
+  width: 100%;
+  font-size: 11px;
+}
+.join-btn {
+  margin-top: auto;
+  width: 90%;
+}
+.big-card {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,255,150,0.2);
+}
+.big-card {
+  transform: scale(1.06);
+  background: linear-gradient(180deg, rgba(0,255,150,0.05), rgba(0,0,0,0.4));
+  box-shadow: 
+    0 0 25px rgba(0,255,150,0.25),
+    0 0 60px rgba(0,255,150,0.1);
+  border: 1px solid rgba(0,255,150,0.4);
+}
+.uc-icon img {
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+.uc {
+  transition: all 0.3s ease;
+}
+
+.uc:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.info-box {
+  background: rgba(255,0,0,0.06);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,0,0,0.4);
+  box-shadow: 0 0 15px rgba(255,0,0,0.2);
+}
+.join-btn {
+  background: linear-gradient(90deg,#ff7a18,#ff3d00);
+  box-shadow: 0 0 10px rgba(255,100,0,0.5);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.join-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,100,0,0.8);
+}
+.broker-logos img {
+  background: white;
+  padding: 2px;
+  transition: transform 0.3s;
+}
+
+.broker-logos img:hover {
+  transform: scale(1.2);
+}
+.uc-icon {
+  margin-bottom: 18px;   /* icon खाली space */
+}
+
+.join-btn {
+  margin-top: 20px;      /* button वर space */
+}
+.uc {
+  width: 280px;
+}
+
+.big-card {
+  width: 310px;
+}
+.uc-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.uc-desc {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.info-box {
+  font-size: 12.5px;
+}
+.uc-icon img {
+  width: 70px;
+  height: 70px;
+}
 
 </style>
 </head>
@@ -1600,13 +1761,11 @@ path:hover {
       Trusted by 10,000+ traders worldwide
     </div>
 
-    <h1 class="display-1 hero-h1">
-      Do you want to have<br>
-      <em>financial freedom?</em>
+    <h1 class="display-1 hero-h1">Automate Your<br>
+       <em>Wealth Creation</em> <br>With<em> Precision AI</em>
     </h1>
 
-    <p class="hero-sub">
-      Copy2Boat's AI copy trading bot works 24/7 — automatically executing trades in Gold, Silver, Crypto &amp; Indices so you can earn while you live.
+    <p class="hero-sub">Step into the future of trading with Copy2Boat’s advanced AI, designed to navigate the complexities of Gold, Silver, and Global Indices. Our technology operates 24/7, executing.</br>high-probability trades with surgical precision while you focus on living your life. Experience a seamless transition from manual effort to automated financial growth.
     </p>
 
     <div class="hero-btns">
@@ -1661,7 +1820,7 @@ path:hover {
 
 <!-- JOIN BANNER -->
 <div class="join-banner">
-  <div class="join-banner-text"> <span>Start your Copy bot trading journey today. Zero experience needed.</span> — Let smart technology work for you while you focus on what matters.</div>
+  <div class="join-banner-text"> <span>Professional Trading Made Accessible to Everyone & Zero experience needed.</span> — Let smart technology work for you while you focus on what matters.</div>
   <a href="#joincta" class="btn btn-dark" style="background:#1f1e1e;color:#ffffff;font-family:'DM Sans',sans-serif;font-weight:700;font-size:.82rem;">Join Now — It's Free →</a>
 </div>
 
@@ -1673,8 +1832,8 @@ path:hover {
     <div class="ct-grid">
       <div class="reveal left">
         <div class="eyebrow">Autopilot Trading</div>
-        <h2 class="display-2" style="margin:14px 0 16px">Sit back and let Copy bot handle your trades with precision and speed. <em>Autopilot</em></h2>
-        <p class="lead">No need to watch charts all day. Our Copy bot does the hard work for you.&nbsp;analyzing the market and placing trades automatically with speed and accuracy.</p>
+        <h2 class="display-2" style="margin:14px 0 16px">High-Speed Execution Meets Sophisticated <em>Risk Management.</em></h2>
+        <p class="lead">Our AI doesn't just trade - It analyses. By processing vast amounts of market data in real-time, Copy2Boat identifies trends and executes orders with a speed and accuracy human traders cannot match.</br>With built-in risk management and a live dashboard, you maintain full visibility over a system dedicated to protecting and growing your capital.</p>
         <div class="ct-tags">
           <span class="tag">Zero Manual Work</span>
           <span class="tag">Risk Managed</span>
@@ -1732,10 +1891,10 @@ path:hover {
 <section id="globalmap" class="section" style="background:var(--bg)">
   <div class="section-inner">
     <div class="section-header reveal">
-      <div class="eyebrow">Global Market Presence</div>
+      <div class="eyebrow">A Trusted Global Network of Modern Traders</div>
       <h2 class="display-2">Countries Using Our <em>Copy 2 Bot</em></h2>
       <div class="orline"></div>
-      <p class="lead">Our Copy 2 Bot is actively deployed across 12+ countries. </br>Green-highlighted regions show where our users are copy trading right now.</p>
+      <p class="lead">Excellence knows no borders. Copy2Boat is actively deployed across 12+ countries, serving a diverse community of over 10,000 traders worldwide. Our expanding global presence is a testament to the reliability and consistency of our AI models, providing localized expertise with a truly international reach.</p>
     </div>
 
    <div class="simple-map">
@@ -1835,14 +1994,106 @@ path:hover {
     </div>
 
     <!-- Upcoming markets -->
-    <h3 class="display-3 reveal" style="text-align:center;margin-top:78px;margin-bottom:10px">Current &amp; <em>Upcoming</em> Markets</h3>
-    <p class="lead reveal" style="text-align:center;margin-bottom:34px">Gold is live. Exciting new markets launching soon be first to access them.</p>
+    <h3 class="display-3 reveal" style="text-align:center;margin-top:78px;margin-bottom:10px">Explore a World of <em>Liquid Markets</em> and <EM>Emerging Opportunities</EM></h3>
+    <p class="lead reveal" style="text-align:center;margin-bottom:34px">While our Gold AI lead the industry in precision, we are constantly expanding your horizons.</p>
     <div class="upcoming-row">
-      <div class="uc glass glass-top live reveal" style="transition-delay:.05s"><span class="uc-icon"><img src="images/gold.png"></span><div class="uc-name">Gold</div><span class="status s-live">● Live Now</span><div class="uc-desc">XAUUSD &amp; MCX Gold. Highest accuracy AI bot.</div></div>
-      <div class="uc glass reveal" style="transition-delay:.1s"><span class="uc-icon"><img src="images/silver.png"></span><div class="uc-name">Silver</div><span class="status s-soon">⏳ Coming Soon</span><div class="uc-desc">XAGUSD &amp; MCX Silver. Full copy trading soon.</div></div>
-      <div class="uc glass reveal" style="transition-delay:.15s"><span class="uc-icon"><img src="images/crypto.png"></span><div class="uc-name">Crypto</div><span class="status s-soon">⏳ Coming Soon</span><div class="uc-desc">BTC, ETH &amp; top altcoins. 24/7 bot strategies.</div></div>
-      <div class="uc glass reveal" style="transition-delay:.2s"><span class="uc-icon"><img src="images/indices.png"></span><div class="uc-name">Indices</div><span class="status s-soon">⏳ Coming Soon</span><div class="uc-desc">Nifty 50, Bank Nifty, US30, NASDAQ.</div></div>
-      <div class="uc glass reveal" style="transition-delay:.25s"><span class="uc-icon"><img src="images/commodities.png"></span><div class="uc-name">Commodities</div><span class="status s-soon">⏳ Coming Soon</span><div class="uc-desc">Crude Oil, Natural Gas &amp; more.</div></div>
+      <div class="uc glass glass-top live reveal big-card">
+
+  <div class="uc-icon">
+    <img src="images/gold.png">
+  </div>
+
+  <div class="uc-name">Gold</div>
+  <span class="status s-live">● Live Now</span>
+
+  <div class="uc-desc">XAUUSD • Highest accuracy AI bot</div>
+
+  <div class="info-box">
+    <div>💰 Min Investment: <b>$1000</b></div>
+    <div>📈 Monthly ROI: <b>25.60%</b></div>
+    <div>📉 Drawdown: <b>Low</b></div>
+    <div>🎯 Win Rate: <b>92%</b></div>
+    <div>👥 Copiers: <b>850+</b></div>
+    <div>⚙ Platform: <b>MT5</b></div>
+  </div>
+
+  <div class="broker-logos">
+    <img src="images/exness.jpeg">
+    <img src="images/xm.png">
+    <img src="images/icmarket.png">
+    <img src="images/octa.png">
+    <img src="images/roboforex.jpg">
+  </div>
+
+  <button class="join-btn">Join Now</button>
+
+</div>
+<div class="uc glass glass-top reveal big-card">
+
+  <div class="uc-icon">
+    <img src="images/crypto.png">
+  </div>
+
+  <div class="uc-name">Crypto</div>
+  <span class="status s-soon">⏳ Coming Soon</span>
+
+  <div class="uc-desc">BTC, ETH • 24/7 AI trading bot</div>
+
+  <!-- 🔥 INFO BOX -->
+  <div class="info-box">
+    <div>💰 Min Investment: <b>$500</b></div>
+    <div>📈 Monthly ROI: <b>20–30%</b></div>
+    <div>📉 Drawdown: <b>Medium</b></div>
+    <div>🎯 Win Rate: <b>88%</b></div>
+    <div>👥 Copiers: <b>600+</b></div>
+    <div>⚙ Platform: <b>MT5</b></div>
+  </div>
+
+  <!-- 🔹 Broker logos -->
+  <div class="broker-logos">
+    <img src="images/exness.jpeg">
+    <img src="images/xm.png">
+    <img src="images/icmarket.png">
+    <img src="images/octa.png">
+    <img src="images/roboforex.jpg">
+  </div>
+
+  <button class="join-btn">Notify Me</button>
+
+</div>
+<div class="uc glass glass-top reveal big-card">
+
+  <div class="uc-icon">
+    <img src="images/indices.png">
+  </div>
+
+  <div class="uc-name">Currency Pairs</div>
+  <span class="status s-soon">⏳ Coming Soon</span>
+
+  <div class="uc-desc">EURUSD, GBPJPY, USDJPY • High accuracy AI bot</div>
+
+  <!-- 🔥 INFO BOX -->
+  <div class="info-box">
+    <div>💰 Min Investment: <b>$500</b></div>
+    <div>📈 Monthly ROI: <b>18–25%</b></div>
+    <div>📉 Drawdown: <b>Low</b></div>
+    <div>🎯 Win Rate: <b>90%</b></div>
+    <div>👥 Copiers: <b>500+</b></div>
+    <div>⚙ Platform: <b>MT5</b></div>
+  </div>
+
+  <!-- 🔹 Broker logos -->
+  <div class="broker-logos">
+    <img src="images/exness.jpeg">
+    <img src="images/xm.png">
+    <img src="images/icmarket.png">
+    <img src="images/octa.png">
+    <img src="images/roboforex.jpg">
+  </div>
+
+  <button class="join-btn">Notify Me</button>
+
+</div>
     </div>
   </div>
 </section>
@@ -1983,7 +2234,7 @@ path:hover {
 
     <!-- Milestones -->
     <div class="mile-box reveal" style="margin-top:50px">
-      <h4>🏆 Affiliate Earnings Milestones</h4>
+      <h4>🏆 Affiliate Earnings Milestones & Highly Master Programme</h4>
       <div class="mile-row">
         <div class="mile"><div class="mc"><img src="images/bronze.png" width="30" height="30"></div><div class="mile-lbl">Starter</div><div class="mile-val">$50/mo</div><div class="mile-ref">5 refs</div></div>
         <div class="mile"><div class="mc"><img src="images/silver.png" width="30" height="30"></div><div class="mile-lbl">Silver</div><div class="mile-val">$100/mo</div><div class="mile-ref">10 refs</div></div>
@@ -2021,6 +2272,21 @@ path:hover {
         <div class="test-stars">★★★★★</div>
         <p class="test-text">"The transparency sets Copy2Boat apart — every trade visible in real-time. Returns have beaten my mutual funds 3×. The Gold bot is absolutely exceptional."</p>
         <div class="test-author"><div class="test-av"><img src="images/person2.jpg" style="border-radius: 50px;"></div><div><div class="test-name">Arjun Mehta</div><div class="test-role">IT Professional, Bangalore</div></div></div>
+      </div>
+       <div class="test-card glass glass-top reveal" style="transition-delay:.2s">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">“I’ve tried several trading systems, but this is by far the most reliable. Clean interface, clear signals, and impressive ROI. The automation saves me hours every week.”</p>
+        <div class="test-author"><div class="test-av"><img src="images/james.jpg" style="border-radius: 50px;"></div><div><div class="test-name">James Walker</div><div class="test-role">Entrepreneur, London</div></div></div>
+      </div>
+       <div class="test-card glass glass-top reveal" style="transition-delay:.2s">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">“The performance has been outstanding, especially in Gold trading. Fast execution and steady returns make it perfect for serious investors.”</p>
+        <div class="test-author"><div class="test-av"><img src="images/dubaiperson.jpg" style="border-radius: 50px;"></div><div><div class="test-name">Ahmed Al-Farsi</div><div class="test-role">Investor, Dubai</div></div></div>
+      </div>
+       <div class="test-card glass glass-top reveal" style="transition-delay:.2s">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">“What impressed me most is the transparency — every trade is visible in real time. The consistency is far better than my stock portfolio. The Gold bot delivers serious results.”</p>
+        <div class="test-author"><div class="test-av"><img src="images/newyorkperson.jpg" style="border-radius: 50px;"></div><div><div class="test-name">David Miller</div><div class="test-role">Financial Analyst, New York</div></div></div>
       </div>
     </div>
   </div>
@@ -2060,7 +2326,7 @@ path:hover {
             <div class="form-group"><label>Email Address</label><input type="email" placeholder="you@example.com"></div>
             <div class="form-group"><label>Phone / WhatsApp</label><input type="tel" placeholder="+91 98765 43210"></div>
             <div class="form-group"><label>I'm Interested In</label>
-              <select><option>Select an option</option><option>AI Copy Trading — Gold</option><option>Affiliate / Referral Program</option><option>Both Trading &amp; Affiliate</option><option>Treading Express</option><option>Learning More First</option></select>
+              <select><option>Select an option</option><option>AI Copy Trading — Gold</option><option>Affiliate / Referral Program</option><option>Both Trading &amp; Affiliate</option></select>
             </div>
             <div class="form-group"><label>Message</label><textarea placeholder="Tell us about your investment goals..."></textarea></div>
             <button class="form-submit" onclick="subForm(event)">Send Message — Join Copy2Boat →</button>
