@@ -2039,10 +2039,538 @@ path:hover {
   line-height: 1.6;
   text-align: justify;
 }
+.form-submit {
+  background: linear-gradient(135deg, #ff7a18, #ff3c00);
+  color: #fff;
+  border: none;
+  padding: 14px 22px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.form-submit:hover {
+  background: linear-gradient(135deg, #ff8c2a, #ff4d1a);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 92, 0, 0.4);
+}
+
+/* Click effect */
+.form-submit:active {
+  transform: scale(0.97);
+}
+/* ICON CIRCLE */
+.mc {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: radial-gradient(circle, rgba(255,140,0,0.15), rgba(255,255,255,0.05));
+  border: 2px solid rgba(255,140,0,0.3);
+
+  transition: all 0.3s ease;
+}
+
+/* IMAGE */
+.mc img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+
+  filter: drop-shadow(0 0 10px rgba(255,140,0,0.6));
+}
+
+/* HOVER EFFECT */
+.mile:hover .mc {
+  transform: translateY(-5px) scale(1.05);
+  border: 2px solid #ff7a18;
+  box-shadow: 0 0 25px rgba(255,122,24,0.8);
+}
+
+/* GOLD (ACTIVE) */
+.mile.hi .mc {
+  border: 2px solid #ff7a18;
+  box-shadow: 0 0 30px rgba(255,122,24,1);
+}
+
+/* GOLD TEXT */
+.gold {
+  color: #ff7a18;
+  font-weight: 600;
+}
+.mile {
+  transition: all 0.3s ease;
+}
+
+.mile:hover {
+  transform: translateY(-8px);
+}
+.aff-flow {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 40px 30px;
+
+  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(0,0,0,0.4));
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+.aff-step {
+  flex: 1;
+  min-width: 180px;
+  text-align: center;
+  padding: 20px;
+
+  border-radius: 15px;
+  background: rgba(255,255,255,0.03);
+
+  transition: all 0.3s ease;
+}
+
+.aff-step:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 25px rgba(255,122,24,0.5);
+}
+.aff-circle {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  margin-bottom: 12px;
+
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  background: radial-gradient(circle, rgba(255,140,0,0.15), rgba(255,255,255,0.05));
+  border: 2px solid rgba(255,140,0,0.3);
+
+  transition: all 0.3s ease;
+}
+
+/* ICON IMAGE */
+.aff-circle img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+
+  filter: drop-shadow(0 0 10px rgba(255,140,0,0.7));
+}
+.aff-num {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #ff7a18, #ff3c00);
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 0 10px rgba(255,122,24,0.8);
+}
+.aff-connector {
+  font-size: 22px;
+  color: #ff7a18;
+  opacity: 0.7;
+}
+
+/* OPTIONAL: hide arrows on mobile */
+@media(max-width:768px){
+  .aff-connector {
+    display: none;
+  }
+}
+.aff-step h5 {
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.aff-step p {
+  color: #aaa;
+  font-size: 13px;
+  line-height: 1.5;
+}
+/* ROW GAP कमी */
+.aff-flow {
+  gap: 12px; /* आधी 20px होता */
+}
+
+/* CARD compact */
+.aff-step {
+  padding: 12px; /* आधी 20px */
+  min-width: 150px;
+  max-width: 170px;
+}
+
+/* ICON circle छोटा */
+.aff-circle {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 8px;
+}
+
+/* IMAGE size adjust */
+.aff-circle img {
+  width: 36px;
+  height: 36px;
+}
+
+/* TEXT spacing */
+.aff-step h5 {
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.aff-step p {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* connector spacing */
+.aff-connector {
+  margin: 0 4px;
+  font-size: 18px;
+}
+.section-gray {
+  background: rgba(255,255,255,0.08);   /* 🔥 premium dark grey */
+  padding: 80px 0;      /* वर-खाली spacing */
+}
+.section-gray {
+  background: linear-gradient(
+    180deg,
+    #0b0d11 0%,
+    #12161d 50%,
+    #0b0d11 100%
+  );
+  /* GRID */
+.broker-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+/* CARD */
+.broker-item {
+  width: 150px;
+  height: 130px;
+  border-radius: 18px;
+
+  background: linear-gradient(145deg, #0f1115, #1a1f28);
+  box-shadow: 
+    inset 2px 2px 6px rgba(255,255,255,0.05),
+    inset -2px -2px 6px rgba(0,0,0,0.8),
+    0 10px 25px rgba(0,0,0,0.6);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s ease;
+}
+
+/* IMAGE */
+.broker-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+
+  filter: grayscale(100%) brightness(1.2);
+  transition: 0.3s ease;
+}
+
+/* NAME */
+.broker-item span {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* HOVER EFFECT 🔥 */
+.broker-item:hover {
+  transform: translateY(-8px) scale(1.05);
+
+  box-shadow: 
+    inset 1px 1px 4px rgba(255,255,255,0.05),
+    inset -1px -1px 4px rgba(0,0,0,0.8),
+    0 0 25px rgba(255,122,24,0.6);
+}
+
+/* COLOR POP */
+.broker-item:hover img {
+  filter: none;
+}
+
+/* GLOW ANIMATION */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+.broker-item {
+  animation: float 4s ease-in-out infinite;
+}
+  padding: 90px 0;
+}
+.broker-item:nth-child(2) {
+  box-shadow: 0 0 30px rgba(255,122,24,0.8);
+}
+/* GRID */
+.broker-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+/* CARD */
+.broker-item {
+  width: 150px;
+  height: 130px;
+  border-radius: 18px;
+
+  background: linear-gradient(145deg, #0f1115, #1a1f28);
+  box-shadow: 
+    inset 2px 2px 6px rgba(255,255,255,0.05),
+    inset -2px -2px 6px rgba(0,0,0,0.8),
+    0 10px 25px rgba(0,0,0,0.6);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s ease;
+
+  /* 🔥 animation apply */
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+/* DIFFERENT DELAY (important) */
+.broker-item:nth-child(2) { animation-delay: 0.3s; }
+.broker-item:nth-child(3) { animation-delay: 0.6s; }
+.broker-item:nth-child(4) { animation-delay: 0.9s; }
+.broker-item:nth-child(5) { animation-delay: 1.2s; }
+
+/* IMAGE */
+.broker-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+
+  filter: grayscale(100%) brightness(1.2);
+  transition: 0.3s ease;
+}
+
+/* TEXT */
+.broker-item span {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* HOVER */
+.broker-item:hover {
+  transform: translateY(-10px) scale(1.08);
+  box-shadow: 0 0 25px rgba(255,122,24,0.7);
+}
+
+.broker-item:hover img {
+  filter: none;
+}
+
+/* 🔥 KEYFRAMES (main animation) */
+@keyframes floatUpDown {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+.image-box img {
+  animation: floatImg 4s ease-in-out infinite;
+}
+
+@keyframes floatImg {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+.image-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-box::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.2),
+    transparent
+  );
+
+  transform: rotate(25deg);
+  transition: 0.6s;
+}
+
+.image-box:hover::after {
+  top: 100%;
+  left: 100%;
+}
+.image-box {
+  perspective: 1000px;
+}
+
+.image-box img {
+  transition: transform 0.2s ease;
+}
+
+.image-box:hover img {
+  transform: rotateX(8deg) rotateY(-8deg) scale(1.05);
+}
+.image-box {
+  border-radius: 25px;
+  overflow: hidden; /* 🔥 VERY IMPORTANT */
+  display: inline-block;
+}
+
+.image-box img {
+  width: 100%;
+  display: block;
+  border-radius: 25px; /* optional but ok */
+}
+
+/* MAIN BOX */
+.aff-left-box {
+  background: linear-gradient(145deg, #11141a, #0b0d12);
+  border-radius: 20px;
+  padding: 30px;
+
+  border: 1px solid rgba(255,255,255,0.05);
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.7),
+    inset 0 0 10px rgba(255,255,255,0.03);
+
+  transition: 0.4s ease;
+}
+
+/* HOVER PREMIUM */
+.aff-left-box:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 0 40px rgba(255,122,24,0.4),
+    0 20px 60px rgba(0,0,0,0.9);
+}
+
+/* EARN BOX */
+.earn-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  background: rgba(255,122,24,0.08);
+  border: 1px solid rgba(255,122,24,0.2);
+
+  padding: 18px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+}
+
+/* $10 TEXT */
+.earn-num {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ff7a18;
+
+  text-shadow: 0 0 15px rgba(255,122,24,0.5);
+}
+
+/* TEXT */
+.earn-copy {
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* BULLETS */
+.aff-left-box div[style*="display:flex"] {
+  transition: 0.3s;
+}
+
+.aff-left-box div[style*="display:flex"]:hover {
+  transform: translateX(5px);
+  color: #fff;
+}
+
+/* BUTTON */
+.btn-primary {
+  background: linear-gradient(135deg, #ff7a18, #ff3c00);
+  border: none;
+  border-radius: 10px;
+
+  box-shadow: 0 10px 25px rgba(255,122,24,0.4);
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(255,122,24,0.7);
+}
+.aff-left-box p.lead {
+  color: #aaa;
+  line-height: 1.6;
+}
 </style>
 </head>
 <body>
+<script>
+const img = document.querySelector(".image-box img");
 
+document.addEventListener("mousemove", (e) => {
+  let x = (window.innerWidth / 2 - e.pageX) / 25;
+  let y = (window.innerHeight / 2 - e.pageY) / 25;
+
+  img.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+});
+.image-box img {
+  border-radius: 25px; /* 🔥 corner curve */
+}
+</script>
 <!-- ══════════════════════════════════════
      LOADER
 ══════════════════════════════════════ -->
@@ -2488,30 +3016,36 @@ path:hover {
       <div class="orline"></div>
       <p class="lead">Your capital stays where you feel most secure.</p>
     </div>
-    <div class="broker-slider">
+ 
 
-  <div class="broker-track">
+    <div class="broker-grid">
 
-    <!-- ORIGINAL ITEMS -->
-    <div class="broker-card"><img src="images/xm.png"><span>XM</span></div>
-    <div class="broker-card"><img src="images/exness.jpeg"><span>Exness</span></div>
-    <div class="broker-card"><img src="images/paperstone.png"><span>Pepperstone</span></div>
-    <div class="broker-card"><img src="images/icmarket.png"><span>IC Markets</span></div>
-    <div class="broker-card"><img src="images/iglogo.jpeg"><span>IG</span></div>
-    <div class="broker-card"><img src="images/ZERO.png"><span>Zerodha</span></div>
-    <div class="broker-card"><img src="images/octa.png"><span>OctaFX</span></div>
-    <div class="broker-card"><img src="images/roboforex.jpg"><span>RoboForex</span></div>
+  <div class="broker-item">
+    <img src="images/xm.png" style="border-radius: 10px;">
+    <span>XM</span>
+  </div>
 
-    <!-- DUPLICATE FOR INFINITE LOOP -->
-    <div class="broker-card"><img src="images/xm.png"><span>XM</span></div>
-    <div class="broker-card"><img src="images/exness.jpeg"><span>Exness</span></div>
-    <div class="broker-card"><img src="images/paperstone.png"><span>Pepperstone</span></div>
-    <div class="broker-card"><img src="images/icmarket.png"><span>IC Markets</span></div>
-    <div class="broker-card"><img src="images/iglogo.jpeg"><span>IG</span></div>
-    <div class="broker-card"><img src="images/ZERO.png"><span>Zerodha</span></div>
-    <div class="broker-card"><img src="images/octa.png"><span>OctaFX</span></div>
-    <div class="broker-card"><img src="images/roboforex.jpg"><span>RoboForex</span></div>
+  <div class="broker-item">
+    <img src="images/exness.jpeg"style="border-radius: 10px;">
+    <span>Exness</span>
+  </div>
 
+  <div class="broker-item">
+    <img src="images/paperstone.png"style="border-radius: 10px;">
+    <span>MB</span>
+  </div>
+
+  <div class="broker-item">
+    <img src="images/icmarket.png"style="border-radius: 10px;">
+    <span>Vantage</span>
+  </div>
+
+  <div class="broker-item">
+    <img src="images/ZERO.png" style="border-radius: 10px;"">
+    <span>Equity</span>
+  </div>
+
+</div>
   </div>
 
 </div>
@@ -2550,7 +3084,7 @@ path:hover {
     </div>
 
     <div class="aff-grid">
-      <div class="reveal left">
+     <div class="reveal left aff-left-box">
         <div class="earn-box">
           <div class="earn-num">$10</div>
           <div class="earn-copy"><strong>Earn $10 per referral.</strong> Every friend who signs up via your link and makes their first deposit earns you $10 — instantly, no cap on earnings.</div>
@@ -2565,49 +3099,55 @@ path:hover {
         </div>
         <a href="#joincta" class="btn btn-primary btn-lg">Become an Affiliate</a>
       </div>
-      <div class="reveal right">
-        <div class="link-card glass glass-top">
-          <h4>🔗 Your Share Link</h4>
-          <div class="link-row">
-            <span id="rlink">Copy2Boat.com/ref/YOUR_ID</span>
-            <button class="copy-btn" onclick="cpL()">Copy</button>
-          </div>
-          <p style="font-size:.74rem;color:var(--grey2);margin-bottom:18px">Sign up first to get your unique link. Share on WhatsApp, Instagram, Telegram, YouTube.</p>
-          <div class="aff-perks">
-            <div class="aff-perk"><div class="ap-val">$10</div><div class="ap-lbl">Per Referral</div></div>
-            <div class="aff-perk"><div class="ap-val">Instant</div><div class="ap-lbl">Credit Speed</div></div>
-            <div class="aff-perk"><div class="ap-val">∞</div><div class="ap-lbl">No Earning Cap</div></div>
-            <div class="aff-perk"><div class="ap-val">24/7</div><div class="ap-lbl">Dashboard</div></div>
-          </div>
-        </div>
-        <div class="calc-box">
-          <h4>💰 Referral Earnings Calculator</h4>
-          <div class="calc-row">
-            <label>Referrals per month</label>
-            <input class="calc-input" type="number" id="cref" value="10" min="1" oninput="calcE()">
-          </div>
-          <div class="calc-result">
-            <div class="cr-val" id="crval">$100</div>
-            <div class="cr-lbl">Estimated Monthly Earnings</div>
-          </div>
-        </div>
-      </div>
-    </div>
+      <div class="reveal right image-box">
+  <img src="images/affiliate-banner.png" alt="Affiliate Program" style="border-radius:10px;">
+</div>
+</div>
  <!-- Milestones -->
+  <div class="section-gray">
     <div class="mile-box reveal" style="margin-top:50px">
 <h4 class="mile-heading">
   🏆 Affiliate <span>Master Program</span>
 </h4>
       <div class="mile-row">
-        <div class="mile"><div class="mc"><img src="images/bronze.png" width="30" height="30"></div><div class="mile-lbl">Starter</div><div class="mile-val">$50/mo</div><div class="mile-ref">5 refs</div></div>
-        <div class="mile"><div class="mc"><img src="images/silver.png" width="30" height="30"></div><div class="mile-lbl">Silver</div><div class="mile-val">$100/mo</div><div class="mile-ref">10 refs</div></div>
-        <div class="mile hi"><div class="mc" style="width:64px;height:64px;font-size:1.7rem"><img src="images/gold1.png" width="40" height="40"></div><div class="mile-lbl" style="color:var(--orange)">Gold</div><div class="mile-val" style="font-size:1rem">$500/mo</div><div class="mile-ref">50 refs</div></div>
-        <div class="mile"><div class="mc"><img src="images/diamond.png" width="30" height="30"></div><div class="mile-lbl">Diamond</div><div class="mile-val">$2K/mo</div><div class="mile-ref">200 refs</div></div>
-        <div class="mile"><div class="mc"><img src="images/royal.png" width="30" height="30"></div><div class="mile-lbl">Royal</div><div class="mile-val">$10K+/mo</div><div class="mile-ref">1000+ refs</div></div>
-      </div>
-      <div style="text-align:center;margin-top:28px"><a href="#joincta" class="btn btn-primary">Start Earning Today</a></div>
-    </div>
+
+  <div class="mile">
+    <div class="mc"><img src="images/bronze.png"></div>
+    <div class="mile-lbl">Starter</div>
+    <div class="mile-val">$50/mo</div>
+    <div class="mile-ref">5 refs</div>
   </div>
+
+  <div class="mile">
+    <div class="mc"><img src="images/silver.png"></div>
+    <div class="mile-lbl">Silver</div>
+    <div class="mile-val">$100/mo</div>
+    <div class="mile-ref">10 refs</div>
+  </div>
+
+  <div class="mile hi">
+    <div class="mc"><img src="images/gold1.png"></div>
+    <div class="mile-lbl gold">Gold</div>
+    <div class="mile-val">$500/mo</div>
+    <div class="mile-ref">50 refs</div>
+  </div>
+
+  <div class="mile">
+    <div class="mc"><img src="images/diamond.png"></div>
+    <div class="mile-lbl">Diamond</div>
+    <div class="mile-val">$2K/mo</div>
+    <div class="mile-ref">200 refs</div>
+  </div>
+
+  <div class="mile">
+    <div class="mc"><img src="images/royal.png"></div>
+    <div class="mile-lbl">Royal</div>
+    <div class="mile-val">$10K+/mo</div>
+    <div class="mile-ref">1000+ refs</div>
+  </div>
+
+</div>
+</div>
 
 
     <!-- AFFILIATE PROCESS GRAPHICAL -->
@@ -2626,7 +3166,7 @@ path:hover {
       <div class="aff-connector">→</div>
       <div class="aff-step"><div class="aff-circle"><img src="images/earn.png" width="80"><div class="aff-num">5</div></div><h5>Earn $10 Instantly</h5><p>$10 credited immediately. Withdraw to bank or UPI any time.</p></div>
     </div>
-
+</div>
    
 <!-- ══════════════════════════════════════
      TESTIMONIALS
@@ -2690,28 +3230,58 @@ path:hover {
           <div style="font-size:2.2rem"><img src="images/call.png" width="50"></img></div>
           <div>
             <div class="eyebrow" style="margin-bottom:4px">Speak to an Expert</div>
-            <div style="font-family:'DM Serif Display',serif;font-size:1.2rem">+91 987653210</div>
+            <div style="font-family:'DM Serif Display',serif;font-size:1.2rem">+91 7588813527</div>
             <div class="body-sm" style="margin-top:2px">Mon–Sat · 9 AM to 8 PM IST</div>
           </div>
         </div>
       </div>
       <div class="reveal right">
         <div class="join-form-card">
-          <h3>Join Now — It's Free</h3>
+          <h3>Join Now</h3>
           <p>Fill in your details and our team will contact you within 24 hours to get you started.</p>
           <div id="jformEl">
-            <div class="form-row">
-              <div class="form-group"><label>First Name</label><input type="text" placeholder="Rajesh"></div>
-              <div class="form-group"><label>Last Name</label><input type="text" placeholder="Kumar"></div>
-            </div>
-            <div class="form-group"><label>Email Address</label><input type="email" placeholder="you@example.com"></div>
-            <div class="form-group"><label>Phone / WhatsApp</label><input type="tel" placeholder="+91 98765 43210"></div>
-            <div class="form-group"><label>I'm Interested In</label>
-              <select><option>Select an option</option><option>AI Copy Trading — Gold</option><option>Affiliate / Referral Program</option><option>Both Trading &amp; Affiliate</option></select>
-            </div>
-            <div class="form-group"><label>Message</label><textarea placeholder="Tell us about your investment goals..."></textarea></div>
-            <button class="form-submit" onclick="subForm(event)">Send Message — Join Copy2Boat →</button>
-          </div>
+  <div class="form-row">
+    <div class="form-group">
+      <label>First Name</label>
+      <input type="text" id="fname" placeholder="Rajesh">
+    </div>
+    <div class="form-group">
+      <label>Last Name</label>
+      <input type="text" id="lname" placeholder="Kumar">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Email Address</label>
+    <input type="email" id="email" placeholder="you@example.com">
+  </div>
+
+  <div class="form-group">
+    <label>Phone / WhatsApp</label>
+    <input type="tel" id="phone" placeholder="+91 98765 43210">
+  </div>
+
+  <div class="form-group">
+    <label>I'm Interested In</label>
+    <select id="interest">
+      <option>Select an option</option>
+      <option>AI Copy Trading — Gold</option>
+      <option>Affiliate / Referral Program</option>
+      <option>Both Trading & Affiliate</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Message</label>
+    <textarea id="message" placeholder="Tell us about your investment goals..."></textarea>
+  </div>
+
+  <button type="button" class="form-submit" onclick="subForm()">
+    Send on WhatsApp — Join Now
+  </button>
+</div>
+
+          
           <div class="form-success" id="fsuccess">
             <div class="check">✨</div>
             <strong>Message Sent Successfully!</strong>
@@ -3009,8 +3579,67 @@ setInterval(() => {
 
   slides[index].classList.add("active");
 }, 8000);
+<script>
+  function subForm(e) {
+    e.preventDefault();
+
+    let firstName = document.querySelector('input[placeholder="Rajesh"]').value;
+    let lastName = document.querySelector('input[placeholder="Kumar"]').value;
+    let email = document.querySelector('input[type="email"]').value;
+    let phone = document.querySelector('input[type="tel"]').value;
+    let interest = document.querySelector('select').value;
+    let message = document.querySelector('textarea').value;
+
+    let whatsappMessage = `Hello, I want to join Copy2Boat.%0A
+Name: ${firstName} ${lastName}%0A
+Email: ${email}%0A
+Phone: ${phone}%0A
+Interest: ${interest}%0A
+Message: ${message}`;
+
+    let whatsappNumber = "919689827518"; // 👉 तुझा नंबर टाक
+
+    let url = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+    window.open(url, '_blank');
+
+    document.getElementById("jformEl").style.display = "none";
+    document.getElementById("fsuccess").style.display = "block";
+  }
 </script>
 </script>
+</script>
+</script>
+<script>
+function subForm() {
+
+  var fname = document.getElementById("fname").value;
+  var lname = document.getElementById("lname").value;
+  var email = document.getElementById("email").value;
+  var phoneInput = document.getElementById("phone").value;
+  var interest = document.getElementById("interest").value;
+  var message = document.getElementById("message").value;
+
+  // simple validation
+  if(fname === "" || phoneInput === "") {
+    alert("Please fill your name and phone number");
+    return;
+  }
+
+  var phone = "917588813527"; // 👉 तुझा WhatsApp नंबर
+
+  var text = 
+`Hello, I want to join Copy2Boat.
+
+Name: ${fname} ${lname}
+Email: ${email}
+Phone: ${phoneInput}
+Interest: ${interest}
+Message: ${message}`;
+
+  var url = "https://api.whatsapp.com/send?phone=" + phone + "&text=" + encodeURIComponent(text);
+
+  window.open(url, "_self");
+}
 </script>
 </body>
 </html>
