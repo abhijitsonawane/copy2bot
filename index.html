@@ -1684,7 +1684,361 @@ path:hover {
   width: 70px;
   height: 70px;
 }
+.mc {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+  transition: all 0.3s ease;
+}
 
+.mc img {
+  width: 45px;
+}
+
+/* 🔥 HOVER EMBOSS */
+.mile:hover .mc {
+  transform: translateY(-6px) scale(1.1);
+  box-shadow: 
+    inset 0 2px 6px rgba(255,255,255,0.15),
+    0 10px 20px rgba(0,0,0,0.6);
+}
+.aff-circle {
+  width: 65px;
+  height: 65px;
+  margin: auto;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: 0.3s;
+}
+
+.aff-circle img {
+  width: 35px;
+}
+
+/* 🔥 EMBOSS HOVER */
+.aff-step:hover .aff-circle {
+  transform: translateY(-5px) scale(1.08);
+  box-shadow: 
+    inset 0 2px 6px rgba(255,255,255,0.15),
+    0 8px 20px rgba(0,0,0,0.6);
+}
+.aff-flow {
+  margin-top: 20px;
+  padding-bottom: 60px;   /* खाली gap */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+.aff-step {
+  max-width: 150px;
+  text-align: center;
+}
+
+.aff-step h5 {
+  margin-top: 10px;
+  font-size: 14px;
+}
+.mile-heading {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.mile-heading span {
+  color: #ff7a18;
+  text-shadow: 0 0 10px rgba(255,120,0,0.6);
+  font-size: larger;
+}
+.hiw-circle {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.hiw-circle img {
+  width: 35px;   /* 👈 small icon */
+  height: 35px;
+  object-fit: contain;
+}
+/* ICON HOVER EMBOSS */
+.hiw-step:hover .hiw-circle {
+  transform: translateY(-6px) scale(1.08);
+  box-shadow: 
+    inset 0 2px 6px rgba(255,255,255,0.15),
+    0 10px 20px rgba(0,0,0,0.6);
+}
+.hiw-step {
+  text-align: center;
+  transition: 0.3s;
+}
+
+.hiw-step:hover {
+  transform: translateY(-8px);
+}
+.info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+.info-item {
+  width: 100%;
+  max-width: 260px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.04);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.info-item b {
+  font-weight: 700;
+  color: #fff;
+}
+.info-box {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.info-box div {
+  display: block;
+  margin: 6px 0;           /* spacing between lines */
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.info-box div b {
+  font-weight: 700;        /* bold values */
+  color: #fff;
+}
+.info-box div {
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.03);
+}
+.info-box {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.info-box div {
+  display: block;
+  margin: 6px 0;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.03);
+  font-size: 15px;
+  font-weight: 500;
+  box-shadow: none;
+}
+
+.info-box div b {
+  font-weight: 700;
+  color: #fff;
+}
+.info-box div,
+.info-box {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.info-box div {
+  border: none !important;
+}
+.bot-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(1.2);
+  transition: all 1s ease;
+}
+
+.bot-slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+.why-ai {
+  margin-top: 18px;
+  text-align: center;   /* full center */
+}
+
+/* title */
+.why-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #00e676;   /* 🔥 green */
+}
+
+/* list layout */
+.why-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* items */
+.why-item {
+  font-size: 13px;
+  padding: 8px;
+  border-radius: 6px;
+  background: rgba(0, 230, 118, 0.08);  /* light green bg */
+  color: #00e676;
+  text-align: center;
+  transition: 0.3s;
+}
+
+/* hover */
+.why-item:hover {
+  background: rgba(0, 230, 118, 0.18);
+  transform: translateY(-2px);
+}
+/* ===== SLIDER FIX ===== */
+
+.bot-panel {
+  width: 100%;
+  max-width: 520px;
+  margin: auto;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.03);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.bot-slider {
+  position: relative;
+  width: 100%;
+  height: 320px;
+}
+
+.bot-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  transform: scale(1.05);
+}
+
+.bot-slide.active {
+  opacity: 1;
+  animation: smoothZoom 4s ease-in-out;
+}
+
+@keyframes smoothZoom {
+  0% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+/* remove empty header gap */
+.bot-panel-head {
+  display: none;
+}
+.bot-info {
+  text-align: center;
+  padding: 15px;
+  background: rgba(255,255,255,0.03);
+}
+
+.bot-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.bot-sub {
+  font-size: 13px;
+  color: #aaa;
+  margin-top: 5px;
+}
+.bot-btn {
+  margin-top: 12px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  background: #e66800;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  align-items: center;
+  width: 480px;
+}
+.bot-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 100%;
+  transition: all 0.8s ease;
+}
+
+.bot-slide.active {
+  left: 0;
+}
+
+.bot-slide.prev {
+  left: -100%;
+}
+.footer-bottom {
+  text-align: center;
+  padding: 20px 15px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin-top: 40px;
+}
+
+/* copyright */
+.footer-copy {
+  font-size: 13px;
+  color: #bbb;
+  margin-bottom: 10px;
+}
+
+/* disclaimer */
+.footer-disc {
+  font-size: 12px;
+  color: #888;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.6;
+  text-align: justify;
+}
 </style>
 </head>
 <body>
@@ -1769,11 +2123,11 @@ path:hover {
     </p>
 
     <div class="hero-btns">
-      <a href="#joincta" class="btn btn-primary btn-lg">Get Started Free</a>
+      <a href="#joincta" class="btn btn-primary btn-lg">Get Started</a>
       <a href="#affiliate" class="btn btn-ghost btn-lg">Earn via Affiliate</a>
     </div>
 
-    <div class="hero-note">Spreads from 0.1 pips on Gold · SEBI-compliant · Zero manual trading needed</div>
+
   </div>
 
   <!-- Slide nav dots -->
@@ -1801,7 +2155,7 @@ path:hover {
 
   <!-- Ticker bar -->
   <div class="ticker-bar">
-    <div class="ticker-label">Live Markets</div>
+   
     <div class="ticker-scroll" id="tickerScroll">
       <!-- items injected by JS -->
     </div>
@@ -1810,18 +2164,18 @@ path:hover {
 
 <!-- STATS -->
 <div class="stats-band">
-  <div class="stat-item reveal"><div class="stat-n" data-c="5000">0</div><div class="stat-l">Active Traders</div></div>
-  <div class="stat-item reveal" style="transition-delay:.08s"><div class="stat-n">₹<span data-c="100">0</span>Cr+</div><div class="stat-l">Volume Traded</div></div>
+  <div class="stat-item reveal"><div class="stat-n" data-c="5000">0</div><div class="stat-l">Active Users</div></div>
+  <div class="stat-item reveal" style="transition-delay:.08s"><div class="stat-n"><span data-c="100">0</span>&nbsp;M</div><div class="stat-l">Volume Traded</div></div>
   <div class="stat-item reveal" style="transition-delay:.16s"><div class="stat-n"><span data-c="91">0</span>%</div><div class="stat-l">Win Rate</div></div>
   <div class="stat-item reveal" style="transition-delay:.24s"><div class="stat-n"><span data-c="3">0</span>+ Yrs</div><div class="stat-l">Experience</div></div>
   <div class="stat-item reveal" style="transition-delay:.32s"><div class="stat-n">24/7</div><div class="stat-l">AI Bot Active</div></div>
-  <div class="stat-item reveal" style="transition-delay:.4s"><div class="stat-n"><span data-c="10">0</span>+</div><div class="stat-l">Broker Partners</div></div>
+  <div class="stat-item reveal" style="transition-delay:.4s"><div class="stat-n"><span data-c="5">0</span>+</div><div class="stat-l">Broker Partners</div></div>
 </div>
 
 <!-- JOIN BANNER -->
 <div class="join-banner">
   <div class="join-banner-text"> <span>Professional Trading Made Accessible to Everyone & Zero experience needed.</span> — Let smart technology work for you while you focus on what matters.</div>
-  <a href="#joincta" class="btn btn-dark" style="background:#1f1e1e;color:#ffffff;font-family:'DM Sans',sans-serif;font-weight:700;font-size:.82rem;">Join Now — It's Free →</a>
+  <a href="#joincta" class="btn btn-dark" style="background:#1f1e1e;color:#ffffff;font-family:'DM Sans',sans-serif;font-weight:700;font-size:.82rem;">Join Now →</a>
 </div>
 
 <!-- ══════════════════════════════════════
@@ -1831,7 +2185,7 @@ path:hover {
   <div class="section-inner">
     <div class="ct-grid">
       <div class="reveal left">
-        <div class="eyebrow">Autopilot Trading</div>
+        
         <h2 class="display-2" style="margin:14px 0 16px">High-Speed Execution Meets Sophisticated <em>Risk Management.</em></h2>
         <p class="lead">Our AI doesn't just trade - It analyses. By processing vast amounts of market data in real-time, Copy2Boat identifies trends and executes orders with a speed and accuracy human traders cannot match.</br>With built-in risk management and a live dashboard, you maintain full visibility over a system dedicated to protecting and growing your capital.</p>
         <div class="ct-tags">
@@ -1843,43 +2197,35 @@ path:hover {
             <span class="tag">Smart Copy Trading</span>
             <span class="tag">Secure & Reliable</span>
         </div>
-        <a href="#joincta" class="btn btn-primary btn-lg">Start to Copy 2 Bot Treading</a>
+        <a href="#joincta" class="btn btn-primary btn-lg">Start to Treading</a>
       </div>
       <div class="reveal right">
         <div class="bot-panel">
           <div class="bot-panel-head">
-            <span style="font-size:.82rem;font-weight:700;letter-spacing:.04em">Copy 2 Bot</span>
-            <div class="bot-status">ACTIVE · GOLD/XAUUSD</div>
+         
+            
           </div>
-<div class="bot-slider">
+
+
+          <div class="bot-slider">
   <div class="bot-slide active" style="background-image:url('images/slider1.png')"></div>
   <div class="bot-slide" style="background-image:url('images/slider2.png')"></div>
   <div class="bot-slide" style="background-image:url('images/robot.png')"></div>
-    <div class="bot-slide" style="background-image:url('images/slider4.png')"></div>
-    <div class="bot-slide" style="background-image:url('images/slider5.png')"></div>
-    <div class="bot-slide" style="background-image:url('images/slider6.png')"></div>
+  <div class="bot-slide" style="background-image:url('images/slider4.png')"></div>
+  <div class="bot-slide" style="background-image:url('images/slider5.png')"></div>
+  <div class="bot-slide" style="background-image:url('images/slider6.png')"></div>
 </div>
-            
-          <div class="bot-panel-img-fallback" style="display:none">🤖</div>
+<div class="bot-panel-img-fallback" style="display:none"></div>
           <div class="mini-chart">
-            <svg viewBox="0 0 400 60" preserveAspectRatio="none">
-              <defs>
-                <linearGradient id="mcf" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#FF6B2B" stop-opacity=".3"/>
-                  <stop offset="100%" stop-color="#FF6B2B" stop-opacity="0"/>
-                </linearGradient>
-              </defs>
-              <path d="M0,50 L40,44 L90,32 L130,38 L180,16 L220,24 L270,8 L310,16 L360,4 L400,8 L400,60 L0,60 Z" fill="url(#mcf)"/>
-              <polyline class="mcpath" points="0,50 40,44 90,32 130,38 180,16 220,24 270,8 310,16 360,4 400,8"
-                fill="none" stroke="url(#cl)" stroke-width="2" stroke-linecap="round"/>
-            </svg>
+          <div class="bot-info">
+  <div class="bot-title">AI Trading Bot</div>
+  <div class="bot-sub">Fully Automated • Risk Managed • 24/7 Active</div>
+</div>
+<button class="bot-btn">Start Trading</button>
+              
+              
           </div>
-          <div class="bot-metrics">
-            <div class="bm-item"><div class="bm-val green">+₹18,460</div><div class="bm-label">Today's P&amp;L</div></div>
-            <div class="bm-item"><div class="bm-val">94.2%</div><div class="bm-label">Win Rate</div></div>
-            <div class="bm-item"><div class="bm-val" style="color:var(--white)">3/3</div><div class="bm-label">Bots Active</div></div>
-          </div>
-        </div>
+    </div>
       </div>
     </div>
   </div>
@@ -1950,7 +2296,7 @@ path:hover {
   <div class="section-inner">
     <div class="gold-grid">
       <div class="reveal left">
-        <div class="eyebrow">Flagship Instrument</div>
+        
         <h2 class="display-2" style="margin:14px 0 16px">We Trade <em>Gold</em>&nbsp; The World's Most Trusted Asset</h2>
         <div class="gold-badge"><img src="images/xauusd.png" width="20" height="20"> XAUUSD Specialist · MCX Gold Expert</div>
         <div class="gold-list">
@@ -2008,15 +2354,26 @@ path:hover {
 
   <div class="uc-desc">XAUUSD • Highest accuracy AI bot</div>
 
-  <div class="info-box">
-    <div>💰 Min Investment: <b>$1000</b></div>
-    <div>📈 Monthly ROI: <b>25.60%</b></div>
-    <div>📉 Drawdown: <b>Low</b></div>
-    <div>🎯 Win Rate: <b>92%</b></div>
-    <div>👥 Copiers: <b>850+</b></div>
-    <div>⚙ Platform: <b>MT5</b></div>
+<div class="info-box">
+  <div class="info-item">💰 Min Investment: <b>$1000</b></div>
+  <div class="info-item">📈 Monthly ROI: <b>25.60%</b></div>
+  <div class="info-item">📉 Drawdown: <b>Low</b></div>
+  <div class="info-item">🎯 Win Rate: <b>92%</b></div>
+  <div class="info-item">👥 Copiers: <b>850+</b></div>
+  <div class="info-item">⚙ Platform: <b>MT5</b></div>
+</div>
+<div class="why-ai">
+
+  <div class="why-title">Why Choose AI Bot?</div>
+
+  <div class="why-list">
+    <div class="why-item">🤖 Advanced AI Trading</div>
+    <div class="why-item">🛡 Risk Managed Strategy</div>
+    <div class="why-item">📊 Proven Results</div>
+    <div class="why-item">⏱ 24/7 Auto Trading</div>
   </div>
 
+</div>
   <div class="broker-logos">
     <img src="images/exness.jpeg">
     <img src="images/xm.png">
@@ -2040,15 +2397,26 @@ path:hover {
   <div class="uc-desc">BTC, ETH • 24/7 AI trading bot</div>
 
   <!-- 🔥 INFO BOX -->
-  <div class="info-box">
-    <div>💰 Min Investment: <b>$500</b></div>
-    <div>📈 Monthly ROI: <b>20–30%</b></div>
-    <div>📉 Drawdown: <b>Medium</b></div>
-    <div>🎯 Win Rate: <b>88%</b></div>
-    <div>👥 Copiers: <b>600+</b></div>
-    <div>⚙ Platform: <b>MT5</b></div>
+<div class="info-box">
+  <div class="info-item">💰 Min Investment: <b>$1000</b></div>
+  <div class="info-item">📈 Monthly ROI: <b>25.60%</b></div>
+  <div class="info-item">📉 Drawdown: <b>Low</b></div>
+  <div class="info-item">🎯 Win Rate: <b>92%</b></div>
+  <div class="info-item">👥 Copiers: <b>850+</b></div>
+  <div class="info-item">⚙ Platform: <b>MT5</b></div>
+</div>
+<div class="why-ai">
+
+  <div class="why-title">Why Choose AI Bot?</div>
+
+  <div class="why-list">
+    <div class="why-item">🤖 Advanced AI Trading</div>
+    <div class="why-item">🛡 Risk Managed Strategy</div>
+    <div class="why-item">📊 Proven Results</div>
+    <div class="why-item">⏱ 24/7 Auto Trading</div>
   </div>
 
+</div>
   <!-- 🔹 Broker logos -->
   <div class="broker-logos">
     <img src="images/exness.jpeg">
@@ -2081,7 +2449,18 @@ path:hover {
     <div>👥 Copiers: <b>500+</b></div>
     <div>⚙ Platform: <b>MT5</b></div>
   </div>
+<div class="why-ai">
 
+  <div class="why-title">Why Choose AI Bot?</div>
+
+  <div class="why-list">
+    <div class="why-item">🤖 Advanced AI Trading</div>
+    <div class="why-item">🛡 Risk Managed Strategy</div>
+    <div class="why-item">📊 Proven Results</div>
+    <div class="why-item">⏱ 24/7 Auto Trading</div>
+  </div>
+
+</div>
   <!-- 🔹 Broker logos -->
   <div class="broker-logos">
     <img src="images/exness.jpeg">
@@ -2105,9 +2484,9 @@ path:hover {
   <div class="section-inner">
     <div class="section-header reveal">
       <div class="eyebrow">Trusted Partnerships</div>
-      <h2 class="display-2">Our Favourite <em>Broker Partners</em></h2>
+      <h2 class="display-2">Seamless Integration with the <em>World’s Leading Brokerages.</em></h2>
       <div class="orline"></div>
-      <p class="lead">Copy2Boat's AI bot integrates with Global brokers. Connect yours in minutes via secure API.</p>
+      <p class="lead">Your capital stays where you feel most secure.</p>
     </div>
     <div class="broker-slider">
 
@@ -2145,9 +2524,9 @@ path:hover {
   <div class="section-inner">
     <div class="section-header reveal">
       <div class="eyebrow">Quick Start</div>
-      <h2 class="display-2">How It <em>Works</em></h2>
+      <h2 class="display-2">From Registration to Automated<em>&nbsp;Earnings in Minutes.</em></h2>
       <div class="orline"></div>
-      <p class="lead">Get started in under 10 minutes. Zero experience required.</p>
+      <p class="lead">We’ve streamlined the path to financial freedom into four simple steps.</p>
     </div>
     <div class="hiw-row">
       <div class="hiw-step reveal" style="transition-delay:.05s"><div class="hiw-circle"><img src="images/login.png"></div><h4>Login &amp; Register</h4><p>Create your secure account with email verification &amp; KYC in 5 minutes.</p></div>
@@ -2181,8 +2560,8 @@ path:hover {
           <div style="display:flex;align-items:center;gap:11px;font-size:.86rem;color:var(--grey)"><span style="color:var(--orange)">◆</span> No investment required to be an affiliate</div>
           <div style="display:flex;align-items:center;gap:11px;font-size:.86rem;color:var(--grey)"><span style="color:var(--orange)">◆</span> Instant wallet credit on every verified referral</div>
           <div style="display:flex;align-items:center;gap:11px;font-size:.86rem;color:var(--grey)"><span style="color:var(--orange)">◆</span> Real-time dashboard to track earnings &amp; referrals</div>
-          <div style="display:flex;align-items:center;gap:11px;font-size:.86rem;color:var(--grey)"><span style="color:var(--orange)">◆</span> Withdraw anytime via UPI or bank transfer</div>
-          <div style="display:flex;align-items:center;gap:11px;font-size:.86rem;color:var(--grey)"><span style="color:var(--orange)">◆</span> 5% monthly bonus for top affiliate earners</div>
+          <div style="display:flex;align-items:center;gap:11px;font-size:.86rem;color:var(--grey)"><span style="color:var(--orange)">◆</span> Withdraw anytime via Crypto Currency</div>
+          <div style="display:flex;align-items:center;gap:11px;font-size:.86rem;color:var(--grey)"><span style="color:var(--orange)">◆</span> Extra monthly bonus for top affiliate earners</div>
         </div>
         <a href="#joincta" class="btn btn-primary btn-lg">Become an Affiliate</a>
       </div>
@@ -2214,6 +2593,22 @@ path:hover {
         </div>
       </div>
     </div>
+ <!-- Milestones -->
+    <div class="mile-box reveal" style="margin-top:50px">
+<h4 class="mile-heading">
+  🏆 Affiliate <span>Master Program</span>
+</h4>
+      <div class="mile-row">
+        <div class="mile"><div class="mc"><img src="images/bronze.png" width="30" height="30"></div><div class="mile-lbl">Starter</div><div class="mile-val">$50/mo</div><div class="mile-ref">5 refs</div></div>
+        <div class="mile"><div class="mc"><img src="images/silver.png" width="30" height="30"></div><div class="mile-lbl">Silver</div><div class="mile-val">$100/mo</div><div class="mile-ref">10 refs</div></div>
+        <div class="mile hi"><div class="mc" style="width:64px;height:64px;font-size:1.7rem"><img src="images/gold1.png" width="40" height="40"></div><div class="mile-lbl" style="color:var(--orange)">Gold</div><div class="mile-val" style="font-size:1rem">$500/mo</div><div class="mile-ref">50 refs</div></div>
+        <div class="mile"><div class="mc"><img src="images/diamond.png" width="30" height="30"></div><div class="mile-lbl">Diamond</div><div class="mile-val">$2K/mo</div><div class="mile-ref">200 refs</div></div>
+        <div class="mile"><div class="mc"><img src="images/royal.png" width="30" height="30"></div><div class="mile-lbl">Royal</div><div class="mile-val">$10K+/mo</div><div class="mile-ref">1000+ refs</div></div>
+      </div>
+      <div style="text-align:center;margin-top:28px"><a href="#joincta" class="btn btn-primary">Start Earning Today</a></div>
+    </div>
+  </div>
+
 
     <!-- AFFILIATE PROCESS GRAPHICAL -->
     <div class="section-header reveal" style="margin-top:80px">
@@ -2232,21 +2627,7 @@ path:hover {
       <div class="aff-step"><div class="aff-circle"><img src="images/earn.png" width="80"><div class="aff-num">5</div></div><h5>Earn $10 Instantly</h5><p>$10 credited immediately. Withdraw to bank or UPI any time.</p></div>
     </div>
 
-    <!-- Milestones -->
-    <div class="mile-box reveal" style="margin-top:50px">
-      <h4>🏆 Affiliate Earnings Milestones & Highly Master Programme</h4>
-      <div class="mile-row">
-        <div class="mile"><div class="mc"><img src="images/bronze.png" width="30" height="30"></div><div class="mile-lbl">Starter</div><div class="mile-val">$50/mo</div><div class="mile-ref">5 refs</div></div>
-        <div class="mile"><div class="mc"><img src="images/silver.png" width="30" height="30"></div><div class="mile-lbl">Silver</div><div class="mile-val">$100/mo</div><div class="mile-ref">10 refs</div></div>
-        <div class="mile hi"><div class="mc" style="width:64px;height:64px;font-size:1.7rem"><img src="images/gold1.png" width="40" height="40"></div><div class="mile-lbl" style="color:var(--orange)">Gold</div><div class="mile-val" style="font-size:1rem">$500/mo</div><div class="mile-ref">50 refs</div></div>
-        <div class="mile"><div class="mc"><img src="images/diamond.png" width="30" height="30"></div><div class="mile-lbl">Diamond</div><div class="mile-val">$2K/mo</div><div class="mile-ref">200 refs</div></div>
-        <div class="mile"><div class="mc"><img src="images/royal.png" width="30" height="30"></div><div class="mile-lbl">Royal</div><div class="mile-val">$10K+/mo</div><div class="mile-ref">1000+ refs</div></div>
-      </div>
-      <div style="text-align:center;margin-top:28px"><a href="#joincta" class="btn btn-primary">Start Earning Today</a></div>
-    </div>
-  </div>
-</section>
-
+   
 <!-- ══════════════════════════════════════
      TESTIMONIALS
 ══════════════════════════════════════ -->
@@ -2364,10 +2745,17 @@ path:hover {
     <div class="footer-col"><h5>Services</h5><ul><li><a href="#">Gold Copy Trading</a></li><li><a href="#">AI Bot Plans</a></li><li><a href="#">Affiliate Program</a></li><li><a href="#">Portfolio Review</a></li><li><a href="#">Webinars</a></li></ul></div>
     <div class="footer-col"><h5>Support</h5><ul><li><a href="#">Help Centre</a></li><li><a href="#">Contact Us</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Use</a></li><li><a href="#">Risk Disclaimer</a></li></ul></div>
   </div>
-  <div class="footer-bottom">
-    <p>© 2026 Copy2Boat. All rights reserved.</p>
-    <p class="footer-disc">⚠️ Trading in financial markets involves risk. Past performance is not indicative of future results. Copy2Boat Consultancy is not a SEBI registered advisor.</p>
-  </div>
+<div class="footer-bottom">
+  <p class="footer-copy">© 2026 Copy2Bot. All rights reserved.</p>
+
+  <p class="footer-disc">
+    ⚠️ Risk Disclosure: Trading in financial markets involves significant risk to your capital. 
+    Past performance and AI-generated win rates are not a guarantee of future results. 
+    Copy2Boat Consultancy provides technology and automated tools; we are not a SEBI-registered 
+    investment advisor and do not provide personalized financial advice. 
+    Please trade responsibly and consult with a professional advisor if needed.
+  </p>
+</div>
 </footer>
 
 <!-- FLOATERS -->
@@ -2609,6 +2997,19 @@ function animate(){
 animate();
 
 });
+<script>
+let slides = document.querySelectorAll(".bot-slide");
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove("active");
+  slides[index].classList.add("prev");
+
+  index = (index + 1) % slides.length;
+
+  slides[index].classList.add("active");
+}, 8000);
+</script>
 </script>
 </script>
 </body>
