@@ -4299,6 +4299,652 @@ path:hover {
   }
 }
 
+/* =====================================
+   COPY2BOT GOLD PREMIUM MARKET SECTION
+===================================== */
+
+.gold-premium {
+  --gp-gold: #ffd477;
+  --gp-orange: #ff8d29;
+  --gp-text: #f8f3e9;
+  --gp-muted: #a9a193;
+  --gp-border: rgba(245, 190, 91, .19);
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 95px 24px;
+  color: var(--gp-text);
+  background:
+    radial-gradient(ellipse at 10% 15%, rgba(255,132,29,.09), transparent 36%),
+    radial-gradient(ellipse at 88% 45%, rgba(229,164,57,.10), transparent 38%),
+    #0d0e0e;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.gold-premium *,
+.gold-premium *::before,
+.gold-premium *::after {
+  box-sizing: border-box;
+}
+
+.gold-premium-glow {
+  position: absolute;
+  z-index: -1;
+  top: 20%;
+  left: 42%;
+  width: 430px;
+  height: 430px;
+  border-radius: 50%;
+  background: rgba(238, 161, 48, .07);
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+.gold-premium-inner {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+.gold-premium-grid {
+  display: grid;
+  grid-template-columns: minmax(0, .94fr) minmax(0, 1.06fr);
+  align-items: center;
+  gap: clamp(35px, 5.5vw, 75px);
+}
+
+/* LEFT CONTENT */
+
+.gold-premium-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 11px 14px;
+  border: 1px solid var(--gp-border);
+  border-radius: 40px;
+  color: #d8c6a5;
+  background: rgba(255,255,255,.025);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.gold-premium-eyebrow > span:nth-child(2) {
+  color: var(--gp-orange);
+}
+
+.gold-live-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #20df92;
+  box-shadow: 0 0 12px rgba(32,223,146,.45);
+}
+
+.gold-premium-content .display-2 {
+  margin: 24px 0 17px;
+  color: #fbf7ee;
+  font-size: clamp(36px, 4.3vw, 57px);
+  font-weight: 850;
+  line-height: 1.12;
+  letter-spacing: -2px;
+}
+
+.gold-premium-content .display-2 em {
+  color: var(--gp-gold);
+  font-style: normal;
+  background: linear-gradient(100deg, #ffe7a9, #f3b84c, #ff8d29);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-premium-intro {
+  max-width: 480px;
+  margin: 0 0 24px;
+  color: var(--gp-muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.gold-premium-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+  padding: 13px 15px;
+  border: 1px solid var(--gp-border);
+  border-radius: 14px;
+  background: linear-gradient(105deg, rgba(244,189,89,.09), rgba(255,255,255,.018));
+}
+
+.gold-premium-badge img {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.gold-premium-badge > div {
+  flex: 1;
+}
+
+.gold-premium-badge strong,
+.gold-premium-badge small {
+  display: block;
+}
+
+.gold-premium-badge strong {
+  color: #f7ead1;
+  font-size: 12px;
+}
+
+.gold-premium-badge small {
+  margin-top: 5px;
+  color: #928878;
+  font-size: 10px;
+}
+
+.gold-badge-arrow {
+  color: var(--gp-gold);
+  font-size: 20px;
+}
+
+/* Feature rows */
+
+.gold-premium-list {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 26px;
+}
+
+.gold-premium-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+  padding: 13px 12px;
+  border: 1px solid transparent;
+  border-radius: 13px;
+  transition: background .25s, border-color .25s, transform .25s;
+}
+
+.gold-premium-item:hover {
+  transform: translateX(3px);
+  border-color: rgba(245,190,91,.14);
+  background: rgba(255,255,255,.025);
+}
+
+.gold-premium-icon {
+  display: grid;
+  place-items: center;
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 1px solid rgba(244,189,89,.19);
+  border-radius: 12px;
+  background: linear-gradient(145deg, #2d2518, #171511);
+}
+
+.gold-premium-icon img {
+  display: block;
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+}
+
+.gold-premium-item > div:nth-child(2) {
+  flex: 1;
+  min-width: 0;
+}
+
+.gold-premium-item h5 {
+  margin: 0 0 6px;
+  color: #f4ead7;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.gold-premium-item p {
+  margin: 0;
+  color: #9d9689;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.gold-item-arrow {
+  flex-shrink: 0;
+  color: #9a8050;
+  font-size: 17px;
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.gold-premium-item:hover .gold-item-arrow {
+  opacity: 1;
+}
+
+.gold-premium-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  width: fit-content;
+  min-width: 235px;
+  padding: 15px 17px 15px 21px;
+  border: 1px solid rgba(255,221,151,.4);
+  border-radius: 12px;
+  color: #21190e;
+  background: linear-gradient(105deg, #ffdf98, #f4b84e 55%, #f58b2b);
+  box-shadow: 0 12px 30px rgba(235,150,44,.13);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 850;
+  transition: transform .25s, box-shadow .25s;
+}
+
+.gold-premium-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 17px 34px rgba(235,150,44,.23);
+}
+
+.gold-cta-arrow {
+  display: grid;
+  place-items: center;
+  width: 33px;
+  height: 33px;
+  border: 1px solid rgba(44,30,10,.18);
+  border-radius: 9px;
+  background: rgba(255,255,255,.2);
+  font-size: 20px;
+}
+
+.gold-premium-footnote {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 20px;
+  color: #888174;
+  font-size: 9px;
+  line-height: 1.7;
+}
+
+.gold-premium-footnote span {
+  color: var(--gp-gold);
+}
+
+/* RIGHT DASHBOARD */
+
+.gold-premium-dashboard {
+  min-width: 0;
+  padding: 23px;
+  border: 1px solid rgba(245,190,91,.28);
+  border-radius: 22px;
+  background:
+    radial-gradient(ellipse at 90% 0%, rgba(255,148,34,.09), transparent 35%),
+    linear-gradient(145deg, #191a19, #101111);
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.26),
+    inset 0 1px rgba(255,255,255,.04);
+}
+
+.gold-dashboard-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.gold-dashboard-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.gold-dashboard-logo {
+  display: grid;
+  place-items: center;
+  width: 49px;
+  height: 49px;
+  flex-shrink: 0;
+  border: 1px solid rgba(255,211,117,.38);
+  border-radius: 50%;
+  color: #ffdc91;
+  background: radial-gradient(circle, #4c3718, #201a11);
+  box-shadow: 0 0 25px rgba(255,181,64,.09);
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.gold-dashboard-kicker {
+  display: block;
+  margin-bottom: 6px;
+  color: #9c907a;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.gold-dashboard-brand h3 {
+  margin: 0;
+  color: #fff6e4;
+  font-size: 17px;
+}
+
+.gold-dashboard-brand h3 span {
+  color: #a8a093;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.gold-live-pill {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+  padding: 9px 10px;
+  border: 1px solid rgba(32,223,146,.24);
+  border-radius: 30px;
+  color: #a6f4d0;
+  background: rgba(32,223,146,.05);
+  font-size: 8px;
+  font-weight: 850;
+  letter-spacing: .7px;
+}
+
+.gold-dashboard-divider {
+  height: 1px;
+  margin: 22px 0;
+  background: linear-gradient(90deg, rgba(245,190,91,.3), rgba(255,255,255,.04));
+}
+
+.gold-price-caption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: #a99c83;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.gold-price {
+  margin: 12px 0 8px;
+  color: #fffaf0;
+  font-size: clamp(36px, 4.1vw, 54px);
+  font-weight: 850;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  overflow-wrap: anywhere;
+  font-variant-numeric: tabular-nums;
+}
+
+.gold-price-change {
+  min-height: 22px;
+  color: #a9a193;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.gold-price-change.is-up {
+  color: #27df99;
+}
+
+.gold-price-change.is-down {
+  color: #ff8181;
+}
+
+.gold-updated-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 12px;
+  color: #878174;
+  font-size: 9px;
+  line-height: 1.7;
+}
+
+.gold-update-indicator {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  margin-top: 4px;
+  border-radius: 50%;
+  background: var(--gp-gold);
+}
+
+/* Chart */
+
+.gold-chart-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 25px;
+  padding: 17px 0 12px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  color: #cdbb98;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.gold-chart-title span:last-child {
+  color: #8f8677;
+}
+
+.gold-live-chart {
+  width: 100%;
+  height: 260px;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.055);
+  border-radius: 12px;
+  background: rgba(0,0,0,.16);
+}
+
+.gold-live-chart .tradingview-widget-container,
+.gold-live-chart .tradingview-widget-container__widget {
+  width: 100%;
+  height: 100%;
+}
+
+/* Robot strip */
+
+.gold-robot-strip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 17px;
+  padding: 14px;
+  border: 1px solid rgba(245,190,91,.17);
+  border-radius: 13px;
+  background: linear-gradient(100deg, rgba(245,190,91,.07), rgba(255,255,255,.015));
+}
+
+.gold-robot-strip-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border: 1px solid rgba(245,190,91,.25);
+  border-radius: 11px;
+  color: var(--gp-gold);
+  background: rgba(245,190,91,.08);
+  font-size: 22px;
+}
+
+.gold-robot-strip-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.gold-robot-strip-text > span,
+.gold-robot-strip-text strong,
+.gold-robot-strip-text small {
+  display: block;
+}
+
+.gold-robot-strip-text > span {
+  margin-bottom: 5px;
+  color: #a08d6b;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.gold-robot-strip-text strong {
+  color: #fff0d4;
+  font-size: 13px;
+}
+
+.gold-robot-strip-text small {
+  margin-top: 5px;
+  color: #958d80;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.gold-robot-strip > a {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 9px;
+  color: #21190e;
+  background: linear-gradient(135deg, #ffdc91, #f38a29);
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.gold-dashboard-disclaimer {
+  margin-top: 16px;
+  color: #827c72;
+  font-size: 9px;
+  line-height: 1.8;
+}
+
+.gold-dashboard-disclaimer strong {
+  color: #c4b69c;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .gold-premium {
+    padding: 70px 22px;
+  }
+
+  .gold-premium-grid {
+    grid-template-columns: 1fr;
+    max-width: 660px;
+    margin: auto;
+    gap: 40px;
+  }
+
+  .gold-premium-content .display-2 {
+    font-size: clamp(38px, 7vw, 55px);
+  }
+}
+
+@media (max-width: 480px) {
+  .gold-premium {
+    padding: 50px 15px;
+  }
+
+  .gold-premium-content .display-2 {
+    font-size: 37px;
+    letter-spacing: -1.2px;
+  }
+
+  .gold-premium-intro {
+    font-size: 12px;
+  }
+
+  .gold-premium-item {
+    gap: 10px;
+    padding: 11px 7px;
+  }
+
+  .gold-premium-icon {
+    width: 39px;
+    height: 39px;
+  }
+
+  .gold-premium-item h5 {
+    font-size: 11px;
+  }
+
+  .gold-premium-item p {
+    font-size: 9px;
+  }
+
+  .gold-item-arrow {
+    display: none;
+  }
+
+  .gold-premium-dashboard {
+    padding: 15px;
+    border-radius: 17px;
+  }
+
+  .gold-dashboard-logo {
+    width: 40px;
+    height: 40px;
+    font-size: 19px;
+  }
+
+  .gold-dashboard-brand {
+    gap: 9px;
+  }
+
+  .gold-dashboard-brand h3 {
+    font-size: 14px;
+  }
+
+  .gold-dashboard-brand h3 span {
+    font-size: 10px;
+  }
+
+  .gold-live-pill {
+    gap: 5px;
+    padding: 8px;
+    font-size: 7px;
+  }
+
+  .gold-price {
+    font-size: clamp(34px, 9.5vw, 44px);
+    letter-spacing: -1.5px;
+  }
+
+  .gold-live-chart {
+    height: 240px;
+  }
+
+  .gold-premium-cta {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gold-premium *,
+  .gold-premium *::before,
+  .gold-premium *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
 /* Respect accessibility preferences */
 @media (prefers-reduced-motion: reduce) {
   .trx-gold-premium *,
@@ -4323,6 +4969,103 @@ path:hover {
     var y=(window.innerHeight/2-e.pageY)/25;
     img.style.transform="rotateY("+x+"deg) rotateX("+y+"deg)";
   });
+})();
+
+/* ===== COPY2BOT XAUUSD PRICE FEED ===== */
+
+/* ===== COPY2BOT GOLD PRICE DISPLAY ===== */
+(() => {
+  const priceEl = document.getElementById("gprice");
+  const changeEl = document.getElementById("goldChange");
+  const updatedEl = document.getElementById("goldUpdated");
+  const statusEl = document.getElementById("goldFeedStatus");
+
+  if (priceEl) priceEl.textContent = "$4,194.40";
+
+  if (changeEl) {
+    changeEl.textContent = "Reference price — not live";
+  }
+
+  if (updatedEl) {
+    updatedEl.textContent = "Live feed not connected";
+  }
+
+  if (statusEl) {
+    statusEl.textContent = "NOT CONNECTED";
+  }
+})();
+
+      // Display a daily change only if the provider supplies it.
+      const rawChange =
+        data.chp ??
+        data.changePercent ??
+        data.change_percent;
+
+      const change = Number(rawChange);
+
+      if (
+        rawChange !== undefined &&
+        rawChange !== null &&
+        rawChange !== "" &&
+        Number.isFinite(change)
+      ) {
+        const up = change >= 0;
+
+        changeEl.className =
+          "gold-price-change " + (up ? "is-up" : "is-down");
+
+        changeEl.textContent =
+          `${up ? "▲" : "▼"} ${Math.abs(change).toFixed(2)}% today`;
+      } else {
+        changeEl.className = "gold-price-change";
+        changeEl.textContent =
+          "Latest spot quote · Daily change not supplied";
+      }
+
+      const timestamp =
+        data.updatedAt ??
+        data.updated_at ??
+        data.timestamp;
+
+      if (timestamp) {
+        let date;
+
+        if (typeof timestamp === "number") {
+          date = new Date(
+            timestamp < 1e12 ? timestamp * 1000 : timestamp
+          );
+        } else {
+          date = new Date(timestamp);
+        }
+
+        updatedEl.textContent = Number.isNaN(date.getTime())
+          ? "Latest quote received · USD per troy ounce"
+          : "Quote updated: " + date.toLocaleString("en-IN");
+      } else {
+        updatedEl.textContent =
+          "Latest available quote · USD per troy ounce";
+      }
+
+      if (statusEl) statusEl.textContent = "QUOTE RECEIVED";
+
+    } catch (error) {
+      console.error("Gold price error:", error);
+
+      changeEl.className = "gold-price-change";
+      changeEl.textContent =
+        "Unable to fetch the latest price. Please retry.";
+
+      updatedEl.textContent =
+        "Price feed unavailable · Check your connection";
+
+      if (statusEl) statusEl.textContent = "FEED UNAVAILABLE";
+    }
+  }
+
+  refreshGoldPrice();
+
+  // Refresh every 60 seconds.
+  setInterval(refreshGoldPrice, 60000);
 })();
 
 </script>
@@ -4577,53 +5320,200 @@ path:hover {
 <!-- ══════════════════════════════════════
      GOLD + MARKETS
 ══════════════════════════════════════ -->
-<section id="gold" class="section" style="background:var(--bg2)">
-  <div class="section-inner">
-    <div class="gold-grid">
-      <div class="reveal left">
-        
-        <h2 class="display-2" style="margin:14px 0 16px">We Trade <em>Gold</em>&nbsp; The World's Most Trusted Asset</h2>
-        <div class="gold-badge"><img src="images/xauusd.png" width="20" height="20"> XAUUSD Specialist · MCX Gold Expert</div>
-        <div class="gold-list">
-          <div class="gl-item"><div class="gl-icon"><img src="images/icon glo.png"></div><div class="gl-text"><h5>XAUUSD — International Gold</h5><p>Traded on global forex with tight spreads through our partner brokers worldwide.</p></div></div>
-          <div class="gl-item"><div class="gl-icon"><img src="images/gold.png"></div><div class="gl-text"><h5>MCX Gold — Global Market</h5><p>Fully automated intraday and positional strategies on MCX exchange.</p></div></div>
-          <div class="gl-item"><div class="gl-icon"><img src="images/ai icon.png"></div><div class="gl-text"><h5>AI Seasonal Intelligence</h5><p>Bot adapts to festivals, RBI/Fed decisions, inflation reports in real-time.</p></div></div>
-          <div class="gl-item"><div class="gl-icon"><img src="images/heading.png"></div><div class="gl-text"><h5>Smart Hedging</h5><p>Correlated asset strategies that protect your capital in all market conditions.</p></div></div>
+
+<!-- COPY2BOT | PREMIUM GOLD MARKET SECTION -->
+<section id="gold" class="section gold-premium">
+  <div class="gold-premium-glow"></div>
+
+  <div class="section-inner gold-premium-inner">
+    <div class="gold-premium-grid">
+
+      <!-- LEFT: GOLD TECHNOLOGY -->
+      <div class="gold-premium-content reveal left">
+
+        <div class="gold-premium-eyebrow">
+          <span class="gold-live-dot"></span>
+          PRECIOUS METALS <span>/</span> AI TECHNOLOGY
         </div>
-        <a href="#joincta" class="btn btn-primary btn-lg">Trade Gold With Us</a>
+
+        <h2 class="display-2">
+          We Trade <em>Gold.</em><br>
+          A World of Opportunity.
+        </h2>
+
+        <p class="gold-premium-intro">
+          Explore gold market technology built around XAUUSD,
+          market analysis and compatible trading platforms.
+        </p>
+
+        <div class="gold-premium-badge">
+          <img src="images/xauusd.png" alt="Gold" width="30" height="30">
+          <div>
+            <strong>XAUUSD · Spot Gold</strong>
+            <small>Global Gold Market</small>
+          </div>
+          <span class="gold-badge-arrow">↗</span>
+        </div>
+
+        <div class="gold-premium-list">
+
+          <div class="gold-premium-item">
+            <div class="gold-premium-icon">
+              <img src="images/icon glo.png" alt="">
+            </div>
+            <div>
+              <h5>XAUUSD — International Gold</h5>
+              <p>Explore global spot gold prices and broker-specific trading conditions.</p>
+            </div>
+            <span class="gold-item-arrow">↗</span>
+          </div>
+
+          <div class="gold-premium-item">
+            <div class="gold-premium-icon">
+              <img src="images/gold.png" alt="">
+            </div>
+            <div>
+              <h5>MCX Gold — Indian Commodity Market</h5>
+              <p>Explore exchange-traded gold contracts, subject to platform and broker support.</p>
+            </div>
+            <span class="gold-item-arrow">↗</span>
+          </div>
+
+          <div class="gold-premium-item">
+            <div class="gold-premium-icon">
+              <img src="images/ai icon.png" alt="">
+            </div>
+            <div>
+              <h5>AI Market Intelligence</h5>
+              <p>Use market data and economic-event information to support analysis.</p>
+            </div>
+            <span class="gold-item-arrow">↗</span>
+          </div>
+
+          <div class="gold-premium-item">
+            <div class="gold-premium-icon">
+              <img src="images/heading.png" alt="">
+            </div>
+            <div>
+              <h5>Risk-Aware Trading Tools</h5>
+              <p>Explore configurable risk controls. No strategy can eliminate market risk.</p>
+            </div>
+            <span class="gold-item-arrow">↗</span>
+          </div>
+
+        </div>
+
+        <a href="#joincta" class="gold-premium-cta">
+          <span>Explore Gold Trading</span>
+          <span class="gold-cta-arrow">↗</span>
+        </a>
+
+        <div class="gold-premium-footnote">
+          <span>◈</span>
+          Market information is indicative and may differ by broker.
+        </div>
       </div>
-      <div class="reveal right">
-        <div class="gold-card">
-          <div class="gold-card-symbol"><img src="images/xauusd.png" width="100" height="100"></div>
-          <div style="font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,215,0,0.45);margin-bottom:5px">XAUUSD · Spot Gold</div>
-          <div class="gold-price" id="gprice">$2,374.50</div>
-          <div class="gold-change">▲ +0.84% today · AI Position: LONG 🟢</div>
-          <div class="gold-chart">
-            <svg viewBox="0 0 400 72" preserveAspectRatio="none">
-              <defs>
-                <linearGradient id="gf2" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#FFD700" stop-opacity=".35"/>
-                  <stop offset="100%" stop-color="#FFD700" stop-opacity="0"/>
-                </linearGradient>
-                <linearGradient id="gl2" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stop-color="#B8860B"/>
-                  <stop offset="100%" stop-color="#FFD700"/>
-                </linearGradient>
-              </defs>
-              <path d="M0,62 L50,56 L100,44 L150,50 L200,26 L250,34 L300,14 L350,20 L400,6 L400,72 L0,72 Z" fill="url(#gf2)"/>
-              <polyline class="gcpath" points="0,62 50,56 100,44 150,50 200,26 250,34 300,14 350,20 400,6"
-                fill="none" stroke="url(#gl2)" stroke-width="2.5" stroke-linecap="round"/>
-            </svg>
+
+      <!-- RIGHT: LIVE GOLD DASHBOARD -->
+      <div class="gold-premium-dashboard reveal right">
+
+        <div class="gold-dashboard-top">
+          <div class="gold-dashboard-brand">
+            <div class="gold-dashboard-logo">Au</div>
+            <div>
+              <span class="gold-dashboard-kicker">LIVE MARKET WATCH</span>
+              <h3>XAUUSD <span>· Spot Gold</span></h3>
+            </div>
           </div>
-          <div class="gold-row">
-            <div class="gr-item"><div class="gr-val">87%</div><div class="gr-lbl">Accuracy</div></div>
-            <div class="gr-item"><div class="gr-val" style="color:#4ade80">+32%</div><div class="gr-lbl">YTD Return</div></div>
-            <div class="gr-item"><div class="gr-val">Low</div><div class="gr-lbl">Drawdown</div></div>
+
+          <div class="gold-live-pill">
+            <span class="gold-live-dot"></span>
+            <span id="goldFeedStatus">CONNECTING</span>
           </div>
         </div>
+
+        <div class="gold-dashboard-divider"></div>
+
+        <div class="gold-price-caption">
+          <span>GOLD SPOT PRICE</span>
+          <span>USD / TROY OUNCE</span>
+        </div>
+
+        <div class="gold-price" id="gprice" aria-live="polite">
+          Loading...
+        </div>
+
+        <div class="gold-price-change" id="goldChange">
+          Fetching latest available market quote...
+        </div>
+
+        <div class="gold-updated-row">
+          <span class="gold-update-indicator"></span>
+          <span id="goldUpdated">Connecting to price provider</span>
+        </div>
+
+        <!-- LIVE CHART -->
+        <div class="gold-chart-title">
+          <span>MARKET CHART</span>
+          <span>XAUUSD · TradingView</span>
+        </div>
+
+        <div class="gold-live-chart">
+          <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js"
+              async
+            >
+            {
+              "symbols": [["Gold Spot", "OANDA:XAUUSD|1D"]],
+              "chartOnly": true,
+              "width": "100%",
+              "height": "260",
+              "locale": "en",
+              "colorTheme": "dark",
+              "isTransparent": true,
+              "showVolume": false,
+              "showMA": false,
+              "hideDateRanges": false,
+              "hideMarketStatus": true,
+              "hideSymbolLogo": true,
+              "scalePosition": "right",
+              "scaleMode": "Normal",
+              "fontFamily": "Inter, Arial, sans-serif",
+              "fontSize": "11",
+              "noTimeScale": false,
+              "valuesTracking": "1",
+              "changeMode": "price-and-percent",
+              "chartType": "area",
+              "lineWidth": 2,
+              "lineType": 0,
+              "dateRanges": ["1d|1", "1m|30", "3m|60", "12m|1D", "all|1M"]
+            }
+            </script>
+          </div>
+        </div>
+
+        <!-- ROBOT INFO -->
+        <div class="gold-robot-strip">
+          <div class="gold-robot-strip-icon">✦</div>
+          <div class="gold-robot-strip-text">
+            <span>POWERED BY COPY2BOT</span>
+            <strong>TRX Gold Robot</strong>
+            <small>Strategy tools for compatible MT5 accounts</small>
+          </div>
+          <a href="#goldbot" aria-label="Explore TRX Gold Robot">↗</a>
+        </div>
+
+        <div class="gold-dashboard-disclaimer">
+          <strong>Risk notice:</strong> Trading may result in substantial loss.
+          This display does not generate an AI trading signal. Verify quotes,
+          performance claims and broker compatibility independently.
+        </div>
+
       </div>
     </div>
-
   </div>
 </section>
 
@@ -5266,7 +6156,7 @@ setInterval(()=>goSlide((curSlide+1)%slides.length),5500);
 /* ════════════ TICKER ════════════ */
 const tickers=[
   {flag:'🇮🇳',pair:'XAUINR',name:'Gold ₹',val:'₹63,240',ch:'+0.84%',up:true},
-  {flag:'🌍',pair:'XAUUSD',name:'Gold $',val:'$2,374',ch:'+0.71%',up:true},
+  {flag:'🌍',pair:'XAUUSD',name:'Gold $',val:'$4,193.60',ch:'+0.71%',up:true},
   {flag:'🇮🇳',pair:'NIFTY50',name:'Nifty 50',val:'22,680',ch:'+0.52%',up:true},
   {flag:'🇺🇸',pair:'US30',name:'Dow Jones',val:'38,900',ch:'-0.18%',up:false},
   {flag:'🌍',pair:'EURUSD',name:'Euro/USD',val:'1.0842',ch:'+0.12%',up:true},
@@ -5316,7 +6206,7 @@ const co=new IntersectionObserver(entries=>{
 document.querySelectorAll('[data-c]').forEach(el=>co.observe(el));
 
 /* ════════════ GOLD PRICE SIM ════════════ */
-const baseGold=2374.50;
+const baseGold=4193.50;
 setInterval(()=>{
   const d=(Math.random()-.48)*3.2;
   const np=(baseGold+d*(Math.random()*4+1)).toFixed(2);
