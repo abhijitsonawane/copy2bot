@@ -2267,7 +2267,9 @@ path:hover {
     #12161d 50%,
     #0b0d11 100%
   );
-  /* GRID */
+  padding: 90px 0;
+}
+/* GRID */
 .broker-grid {
   display: flex;
   justify-content: center;
@@ -2337,8 +2339,6 @@ path:hover {
 
 .broker-item {
   animation: float 4s ease-in-out infinite;
-}
-  padding: 90px 0;
 }
 .broker-item:nth-child(2) {
   box-shadow: 0 0 30px rgba(255,122,24,0.8);
@@ -2555,21 +2555,1776 @@ path:hover {
   color: #aaa;
   line-height: 1.6;
 }
+
+/* ===== TRX GOLD PREMIUM ===== */
+.trx-gold-premium {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 15% 45%, rgba(255,107,43,.09), transparent 40%),
+    radial-gradient(ellipse at 90% 10%, rgba(255,184,61,.07), transparent 32%),
+    var(--bg);
+  border-top: 1px solid rgba(255,255,255,.06);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+.trx-premium-heading {
+  max-width: 760px;
+  margin: 0 auto 58px;
+  text-align: center;
+}
+
+.trx-premium-heading .lead {
+  max-width: 650px;
+  margin: 16px auto 0;
+}
+
+.trx-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #ff985f;
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .19em;
+  margin-bottom: 20px;
+}
+
+.trx-live-dot, .trx-mini-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  display: inline-block;
+  border-radius: 50%;
+  background: #ff8a32;
+  box-shadow: 0 0 12px rgba(255,138,50,.65);
+}
+
+.trx-premium-grid {
+  display: grid;
+  grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+  gap: clamp(30px, 5vw, 70px);
+  align-items: center;
+}
+
+/* Robot showcase */
+.trx-robot-stage {
+  min-width: 0;
+  min-height: 550px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid rgba(255,151,60,.2);
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.055), transparent 45%),
+    #101116;
+  box-shadow: 0 30px 80px rgba(0,0,0,.32);
+  isolation: isolate;
+}
+
+.trx-stage-glow {
+  position: absolute;
+  z-index: -1;
+  width: 80%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255,137,25,.24),
+    rgba(255,107,43,.07) 48%,
+    transparent 72%
+  );
+}
+
+.trx-stage-ring {
+  position: absolute;
+  z-index: -1;
+  width: 76%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(255,166,66,.24);
+  border-radius: 50%;
+}
+
+.trx-ring-1 {
+  width: 90%;
+  border-style: dashed;
+  animation: trxRotate 35s linear infinite;
+}
+
+.trx-ring-2 {
+  width: 68%;
+  border-color: rgba(255,255,255,.09);
+}
+
+@keyframes trxRotate {
+  to { transform: rotate(360deg); }
+}
+
+.trx-robot-image {
+  display: block;
+  width: 94%;
+  max-height: 440px;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 28px rgba(255,131,20,.2));
+  transition: transform .4s ease, filter .4s ease;
+}
+
+.trx-robot-stage:hover .trx-robot-image {
+  transform: scale(1.035);
+  filter: drop-shadow(0 18px 38px rgba(255,131,20,.32));
+}
+
+.trx-stage-label {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 13px;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 9px;
+  background: rgba(11,12,15,.82);
+  color: #eee;
+  font-size: .65rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  backdrop-filter: blur(12px);
+}
+
+.trx-stage-bottom {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  right: 18px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 17px;
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 13px;
+  background: rgba(12,13,17,.88);
+  backdrop-filter: blur(16px);
+}
+
+.trx-gold-symbol {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  background: rgba(255,163,42,.12);
+  color: #ffc35a;
+  font-size: 1.5rem;
+}
+
+.trx-stage-bottom strong,
+.trx-stage-bottom small {
+  display: block;
+}
+
+.trx-stage-bottom strong {
+  color: #fff;
+  font-size: .9rem;
+  letter-spacing: .08em;
+}
+
+.trx-stage-bottom small {
+  margin-top: 4px;
+  color: rgba(255,255,255,.46);
+  font-size: .62rem;
+  letter-spacing: .08em;
+}
+
+.trx-stage-arrow {
+  margin-left: auto;
+  color: #ff8a32;
+  font-size: 1.5rem;
+}
+
+/* Details panel */
+.trx-details {
+  min-width: 0;
+  padding: clamp(22px, 3vw, 34px);
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 22px;
+  background: linear-gradient(
+    145deg,
+    rgba(255,255,255,.055),
+    rgba(255,255,255,.018)
+  );
+  box-shadow: 0 24px 65px rgba(0,0,0,.22);
+}
+
+.trx-status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.trx-small-label {
+  color: rgba(255,255,255,.43);
+  font-size: .64rem;
+  font-weight: 800;
+  letter-spacing: .13em;
+}
+
+.trx-status-row h3 {
+  margin-top: 5px;
+  color: #fff;
+  font-size: 1.55rem;
+  font-weight: 700;
+}
+
+.trx-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 11px;
+  border: 1px solid rgba(255,153,59,.24);
+  border-radius: 30px;
+  background: rgba(255,143,48,.08);
+  color: #ffb36d;
+  font-size: .65rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.trx-status .trx-live-dot {
+  width: 6px;
+  height: 6px;
+}
+
+.trx-description {
+  margin: 18px 0;
+  color: rgba(255,255,255,.57);
+  font-size: .88rem;
+  line-height: 1.8;
+}
+
+.trx-market-chip {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 16px;
+  margin-bottom: 17px;
+  border: 1px solid rgba(255,174,61,.2);
+  border-radius: 12px;
+  background: linear-gradient(
+    100deg,
+    rgba(255,159,43,.1),
+    rgba(255,255,255,.018)
+  );
+}
+
+.trx-chip-icon {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  border-radius: 10px;
+  background: rgba(255,177,49,.12);
+  color: #ffc25b;
+  font-size: 1.35rem;
+}
+
+.trx-market-chip strong,
+.trx-market-chip small {
+  display: block;
+}
+
+.trx-market-chip strong {
+  color: #fff;
+  font-size: .95rem;
+}
+
+.trx-market-chip small {
+  margin-top: 3px;
+  color: rgba(255,255,255,.43);
+  font-size: .72rem;
+}
+
+.trx-chip-platform {
+  margin-left: auto;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: rgba(255,255,255,.07);
+  color: #ffb36d;
+  font-size: .72rem;
+  font-weight: 800;
+}
+
+/* Metrics */
+.trx-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 12px;
+}
+
+.trx-metric {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 12px;
+  background: rgba(255,255,255,.025);
+  transition: border-color .25s, transform .25s;
+}
+
+.trx-metric:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255,140,50,.35);
+}
+
+.trx-metric-icon {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 1.15rem;
+}
+
+.trx-metric small,
+.trx-metric strong {
+  display: block;
+}
+
+.trx-metric small {
+  color: rgba(255,255,255,.45);
+  font-size: .68rem;
+  line-height: 1.5;
+}
+
+.trx-metric strong {
+  margin-top: 6px;
+  color: #ffb36d;
+  font-size: 1.15rem;
+  overflow-wrap: anywhere;
+}
+
+.trx-metric:last-child strong {
+  font-size: .95rem;
+}
+
+/* Benefits */
+.trx-why {
+  padding: 23px 0;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.trx-why h4 {
+  margin-bottom: 15px;
+  color: #fff;
+  font-size: .9rem;
+}
+
+.trx-benefits {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 12px;
+}
+
+.trx-benefits > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: rgba(255,255,255,.61);
+  font-size: .76rem;
+  line-height: 1.6;
+}
+
+.trx-benefits > div span {
+  color: #ff9d4b;
+  font-weight: 900;
+}
+
+/* Broker logos */
+.trx-broker-area {
+  padding: 21px 0;
+}
+
+.trx-broker-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 13px;
+}
+
+.trx-broker-logos img {
+  width: 54px;
+  height: 40px;
+  padding: 6px;
+  object-fit: contain;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 8px;
+  background: #fff;
+  transition: transform .25s;
+}
+
+.trx-broker-logos img:hover {
+  transform: translateY(-3px);
+}
+
+/* CTA */
+.trx-join-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 17px 20px;
+  border: 1px solid rgba(255,180,100,.45);
+  border-radius: 10px;
+  background: linear-gradient(100deg, #ff6b2b, #ff8d32);
+  box-shadow: 0 8px 26px rgba(255,107,43,.2);
+  color: #fff;
+  font-size: .9rem;
+  font-weight: 800;
+  transition: transform .25s, box-shadow .25s;
+}
+
+.trx-join-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(255,107,43,.32);
+}
+
+.trx-join-button > span {
+  font-size: 1.35rem;
+}
+
+.trx-risk-disclaimer {
+  margin-top: 14px;
+  color: rgba(255,255,255,.37);
+  font-size: .67rem;
+  line-height: 1.75;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .trx-premium-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .trx-robot-stage {
+    min-height: 460px;
+  }
+
+  .trx-robot-image {
+    max-height: 370px;
+  }
+}
+
+@media (max-width: 520px) {
+  .trx-premium-heading {
+    margin-bottom: 35px;
+  }
+
+  .trx-robot-stage {
+    min-height: 350px;
+    border-radius: 17px;
+  }
+
+  .trx-robot-image {
+    width: 100%;
+    max-height: 280px;
+  }
+
+  .trx-stage-label {
+    top: 12px;
+    left: 12px;
+    font-size: .58rem;
+  }
+
+  .trx-stage-bottom {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    padding: 12px;
+  }
+
+  .trx-details {
+    padding: 19px;
+    border-radius: 16px;
+  }
+
+  .trx-metric {
+    padding: 13px;
+  }
+
+  .trx-metric strong {
+    font-size: 1rem;
+  }
+
+  .trx-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .trx-broker-logos {
+    gap: 7px;
+  }
+
+  .trx-broker-logos img {
+    width: 48px;
+    height: 36px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trx-ring-1 {
+    animation: none;
+  }
+
+  .trx-robot-image,
+  .trx-metric,
+  .trx-join-button {
+    transition: none;
+  }
+}
+
+/* ==========================================
+   COPY2BOT — TRX GOLD PREMIUM SECTION
+   Dark Luxury / Gold / Orange
+========================================== */
+
+.trx-gold-premium {
+  --trx-orange: #ff8a24;
+  --trx-gold: #f2bd61;
+  --trx-white: #f8f5ee;
+  --trx-muted: #aaa69d;
+  --trx-border: rgba(242, 189, 97, .17);
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 100px 24px 110px;
+  color: var(--trx-white);
+  background:
+    radial-gradient(ellipse at 8% 15%,
+      rgba(255, 125, 25, .09), transparent 32%),
+    radial-gradient(ellipse at 88% 45%,
+      rgba(219, 151, 49, .10), transparent 34%),
+    #10100f;
+}
+
+.trx-gold-premium *,
+.trx-gold-premium *::before,
+.trx-gold-premium *::after {
+  box-sizing: border-box;
+}
+
+.trx-premium-bg-glow {
+  position: absolute;
+  z-index: -2;
+  top: 18%;
+  left: 42%;
+  width: 500px;
+  height: 500px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: rgba(209, 137, 40, .055);
+  filter: blur(100px);
+}
+
+.trx-premium-grid-lines {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  opacity: .14;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 58px 58px;
+  mask-image: linear-gradient(to bottom, black, transparent 88%);
+}
+
+.trx-gold-premium .trx-premium-inner {
+  position: relative;
+  z-index: 1;
+  width: min(1220px, 100%);
+  margin: 0 auto;
+}
+
+/* Heading */
+
+.trx-gold-premium .trx-premium-heading {
+  max-width: 790px;
+  margin: 0 auto 62px;
+  text-align: center;
+}
+
+.trx-gold-premium .trx-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 11px 17px;
+  border: 1px solid var(--trx-border);
+  border-radius: 50px;
+  background: rgba(255,255,255,.025);
+  color: #d4c8b1;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+.trx-gold-premium .trx-live-dot,
+.trx-gold-premium .trx-mini-dot,
+.trx-gold-premium .trx-status-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+  border-radius: 50%;
+  background: #64d69a;
+  box-shadow: 0 0 12px rgba(100,214,154,.45);
+}
+
+.trx-gold-premium .trx-eyebrow-separator {
+  color: var(--trx-orange);
+}
+
+.trx-gold-premium .display-2 {
+  margin: 25px 0 17px;
+  color: #f8f5ee;
+  font-size: clamp(36px, 5vw, 62px);
+  font-weight: 800;
+  line-height: 1.13;
+  letter-spacing: -2.2px;
+}
+
+.trx-gold-premium .display-2 em {
+  color: var(--trx-gold);
+  font-style: normal;
+  background: linear-gradient(100deg, #ffdc91, #f0a63b 55%, #ff8a24);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.trx-gold-premium .trx-heading-description {
+  max-width: 620px;
+  margin: 0 auto;
+  color: #a9a49a;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.trx-gold-premium .trx-heading-divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 27px;
+}
+
+.trx-gold-premium .trx-heading-divider span {
+  width: 55px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #a87431);
+}
+
+.trx-gold-premium .trx-heading-divider span:last-child {
+  transform: rotate(180deg);
+}
+
+.trx-gold-premium .trx-heading-divider i {
+  color: var(--trx-gold);
+  font-size: 15px;
+  font-style: normal;
+}
+
+/* Main layout */
+
+.trx-gold-premium .trx-premium-grid {
+  display: grid;
+  grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+  align-items: center;
+  gap: clamp(38px, 6vw, 82px);
+}
+
+/* Robot visual */
+
+.trx-gold-premium .trx-robot-stage {
+  position: relative;
+  isolation: isolate;
+  min-width: 0;
+  min-height: 610px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 23px;
+  overflow: visible;
+  border: 1px solid rgba(235,184,92,.22);
+  border-radius: 25px;
+  background:
+    radial-gradient(ellipse at 50% 42%,
+      rgba(222,147,43,.13), transparent 49%),
+    linear-gradient(145deg, #1b1a17, #111110 72%);
+  box-shadow:
+    0 35px 90px rgba(0,0,0,.25),
+    inset 0 1px rgba(255,255,255,.035);
+}
+
+.trx-gold-premium .trx-stage-topline {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255,255,255,.075);
+  color: #c7bda9;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.trx-gold-premium .trx-stage-topline > span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.trx-gold-premium .trx-stage-version {
+  color: #79736a;
+}
+
+.trx-gold-premium .trx-stage-glow {
+  position: absolute;
+  z-index: -1;
+  top: 20%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: rgba(227,151,42,.12);
+  filter: blur(75px);
+  pointer-events: none;
+}
+
+.trx-gold-premium .trx-stage-orbit {
+  position: absolute;
+  z-index: -1;
+  top: 47%;
+  left: 50%;
+  border: 1px solid rgba(236,174,72,.15);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.trx-gold-premium .trx-orbit-one {
+  width: 310px;
+  height: 430px;
+  transform: translate(-50%,-50%) rotate(27deg);
+}
+
+.trx-gold-premium .trx-orbit-two {
+  width: 390px;
+  height: 300px;
+  transform: translate(-50%,-50%) rotate(-30deg);
+}
+
+.trx-gold-premium .trx-stage-asset {
+  position: absolute;
+  z-index: 3;
+  top: 76px;
+  left: 23px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 13px;
+  border: 1px solid rgba(237,187,98,.20);
+  border-radius: 12px;
+  background: rgba(21,20,17,.82);
+  backdrop-filter: blur(10px);
+}
+
+.trx-gold-premium .trx-asset-icon {
+  display: grid;
+  place-items: center;
+  width: 33px;
+  height: 33px;
+  border-radius: 9px;
+  color: #f4bf62;
+  background: rgba(241,179,74,.12);
+}
+
+.trx-gold-premium .trx-stage-asset small,
+.trx-gold-premium .trx-stage-asset strong {
+  display: block;
+}
+
+.trx-gold-premium .trx-stage-asset small {
+  margin-bottom: 5px;
+  color: #898176;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.trx-gold-premium .trx-stage-asset strong {
+  color: #f1e5ce;
+  font-size: 10px;
+  letter-spacing: .5px;
+}
+
+.trx-gold-premium .trx-robot-image-wrap {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 405px;
+  padding: 45px 0 25px;
+}
+
+.trx-gold-premium .trx-image-halo {
+  position: absolute;
+  width: 70%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(245,190,95,.17);
+  border-radius: 50%;
+  background: radial-gradient(circle,
+    rgba(243,173,62,.10), transparent 69%);
+  box-shadow: 0 0 70px rgba(238,161,49,.07);
+}
+
+.trx-gold-premium .trx-robot-image {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  max-width: 370px;
+  height: 385px;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 30px rgba(0,0,0,.35));
+  animation: trxRobotFloat 5s ease-in-out infinite;
+}
+
+@keyframes trxRobotFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.trx-gold-premium .trx-image-caption {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  color: #a59a84;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.trx-gold-premium .trx-caption-line {
+  width: 23px;
+  height: 1px;
+  background: var(--trx-orange);
+}
+
+.trx-gold-premium .trx-stage-bottom {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 17px 0 0;
+  border-top: 1px solid rgba(255,255,255,.09);
+}
+
+.trx-gold-premium .trx-stage-emblem {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  border: 1px solid rgba(240,183,84,.30);
+  border-radius: 12px;
+  color: #f3bf62;
+  background: rgba(238,173,61,.09);
+  font-size: 22px;
+}
+
+.trx-gold-premium .trx-stage-title {
+  flex: 1;
+}
+
+.trx-gold-premium .trx-stage-title strong,
+.trx-gold-premium .trx-stage-title small {
+  display: block;
+}
+
+.trx-gold-premium .trx-stage-title strong {
+  font-size: 16px;
+  letter-spacing: 1.4px;
+}
+
+.trx-gold-premium .trx-stage-title strong span {
+  color: var(--trx-gold);
+}
+
+.trx-gold-premium .trx-stage-title small {
+  margin-top: 5px;
+  color: #898176;
+  font-size: 8px;
+  letter-spacing: 1.5px;
+}
+
+.trx-gold-premium .trx-stage-platform {
+  text-align: right;
+}
+
+.trx-gold-premium .trx-stage-platform span {
+  display: inline-block;
+  padding: 7px 10px;
+  border: 1px solid rgba(238,177,75,.22);
+  border-radius: 7px;
+  color: #f3c16e;
+  background: rgba(236,174,72,.08);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.trx-gold-premium .trx-stage-platform small {
+  display: block;
+  margin-top: 5px;
+  color: #837b70;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+/* Floating info cards */
+
+.trx-gold-premium .trx-float-card {
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px;
+  border: 1px solid rgba(236,185,94,.23);
+  border-radius: 13px;
+  background: rgba(26,25,21,.94);
+  box-shadow: 0 15px 40px rgba(0,0,0,.25);
+  backdrop-filter: blur(12px);
+  animation: trxFloatCard 4.5s ease-in-out infinite;
+}
+
+.trx-gold-premium .trx-float-left {
+  top: 43%;
+  left: -32px;
+}
+
+.trx-gold-premium .trx-float-right {
+  right: -26px;
+  bottom: 21%;
+  animation-delay: -2s;
+}
+
+@keyframes trxFloatCard {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -5px; }
+}
+
+.trx-gold-premium .trx-float-icon {
+  display: grid;
+  place-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 9px;
+  color: #f5c36a;
+  background: rgba(238,174,68,.12);
+  font-size: 20px;
+}
+
+.trx-gold-premium .trx-float-card strong,
+.trx-gold-premium .trx-float-card small {
+  display: block;
+  white-space: nowrap;
+}
+
+.trx-gold-premium .trx-float-card strong {
+  color: #f4eee3;
+  font-size: 10px;
+}
+
+.trx-gold-premium .trx-float-card small {
+  margin-top: 5px;
+  color: #a29a8c;
+  font-size: 8px;
+}
+
+/* Details */
+
+.trx-gold-premium .trx-details {
+  min-width: 0;
+}
+
+.trx-gold-premium .trx-details-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.trx-gold-premium .trx-overline {
+  color: #d7a64e;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.trx-gold-premium .trx-details-top h3 {
+  margin: 9px 0 0;
+  color: #fbf7ee;
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 800;
+  letter-spacing: -1.2px;
+}
+
+.trx-gold-premium .trx-details-top h3 span {
+  color: var(--trx-gold);
+}
+
+.trx-gold-premium .trx-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  padding: 10px 12px;
+  border: 1px solid rgba(242,189,97,.19);
+  border-radius: 50px;
+  color: #d9c8a8;
+  background: rgba(242,189,97,.055);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.trx-gold-premium .trx-description {
+  margin: 0 0 24px;
+  color: #a9a49a;
+  font-size: 13px;
+  line-height: 1.95;
+}
+
+/* Market card */
+
+.trx-gold-premium .trx-market-chip {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 22px;
+  padding: 16px;
+  border: 1px solid rgba(242,189,97,.20);
+  border-radius: 15px;
+  background: linear-gradient(110deg,
+    rgba(231,166,63,.09), rgba(255,255,255,.018));
+}
+
+.trx-gold-premium .trx-market-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border: 1px solid rgba(244,189,95,.30);
+  border-radius: 13px;
+  color: #f7c66e;
+  background: linear-gradient(145deg, #45331c, #211c14);
+  font-family: Georgia, serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.trx-gold-premium .trx-market-name {
+  flex: 1;
+  min-width: 0;
+}
+
+.trx-gold-premium .trx-market-name strong,
+.trx-gold-premium .trx-market-name small {
+  display: block;
+}
+
+.trx-gold-premium .trx-market-name strong {
+  color: #fff8e9;
+  font-size: 15px;
+  letter-spacing: .5px;
+}
+
+.trx-gold-premium .trx-market-name small {
+  margin-top: 5px;
+  color: #a7a093;
+  font-size: 10px;
+}
+
+.trx-gold-premium .trx-market-right {
+  text-align: right;
+}
+
+.trx-gold-premium .trx-market-right strong,
+.trx-gold-premium .trx-market-right .trx-market-label {
+  display: block;
+}
+
+.trx-gold-premium .trx-market-label {
+  margin-bottom: 5px;
+  color: #938876;
+  font-size: 8px;
+  letter-spacing: 1.4px;
+}
+
+.trx-gold-premium .trx-market-right strong {
+  color: var(--trx-gold);
+  font-size: 11px;
+}
+
+/* Metrics */
+
+.trx-gold-premium .trx-metrics-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: #a59b88;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.trx-gold-premium .trx-metrics-heading span:last-child {
+  color: #746e62;
+}
+
+.trx-gold-premium .trx-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.trx-gold-premium .trx-metric {
+  min-width: 0;
+  padding: 17px;
+  border: 1px solid rgba(255,255,255,.075);
+  border-radius: 14px;
+  background: linear-gradient(145deg,
+    rgba(255,255,255,.045), rgba(255,255,255,.015));
+  transition: border-color .25s, background .25s, transform .25s;
+}
+
+.trx-gold-premium .trx-metric:hover {
+  transform: translateY(-3px);
+  border-color: rgba(242,189,97,.32);
+  background: rgba(242,189,97,.045);
+}
+
+.trx-gold-premium .trx-metric-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.trx-gold-premium .trx-metric-icon {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  color: #f4bd5d;
+  background: rgba(241,176,67,.11);
+  font-size: 20px;
+}
+
+.trx-gold-premium .trx-metric-index {
+  color: #5e594f;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.trx-gold-premium .trx-metric > small {
+  display: block;
+  margin-bottom: 7px;
+  color: #a7a093;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.trx-gold-premium .trx-metric > strong {
+  display: block;
+  overflow-wrap: anywhere;
+  color: #fbf4e7;
+  font-size: clamp(17px, 2vw, 22px);
+  font-weight: 800;
+  letter-spacing: -.4px;
+}
+
+.trx-gold-premium .trx-metric:nth-child(2) > strong,
+.trx-gold-premium .trx-metric:nth-child(3) > strong {
+  color: var(--trx-gold);
+}
+
+/* Benefits */
+
+.trx-gold-premium .trx-why {
+  margin-top: 23px;
+  padding: 20px;
+  border: 1px solid rgba(255,255,255,.075);
+  border-radius: 15px;
+  background: rgba(255,255,255,.018);
+}
+
+.trx-gold-premium .trx-why-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 17px;
+}
+
+.trx-gold-premium .trx-why-star {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border: 1px solid rgba(242,189,97,.23);
+  border-radius: 11px;
+  color: var(--trx-gold);
+  background: rgba(242,189,97,.08);
+  font-size: 19px;
+}
+
+.trx-gold-premium .trx-why-heading h4 {
+  margin: 0;
+  color: #f6f0e4;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.trx-gold-premium .trx-why-heading p {
+  margin: 5px 0 0;
+  color: #91897d;
+  font-size: 10px;
+}
+
+.trx-gold-premium .trx-benefits {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px 18px;
+}
+
+.trx-gold-premium .trx-benefits > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: #c5beb2;
+  font-size: 10px;
+  line-height: 1.65;
+}
+
+.trx-gold-premium .trx-benefits > div span {
+  display: grid;
+  place-items: center;
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  color: #f6c66f;
+  background: rgba(242,189,97,.12);
+  font-size: 10px;
+}
+
+/* Broker logos */
+
+.trx-gold-premium .trx-broker-area {
+  margin-top: 25px;
+}
+
+.trx-gold-premium .trx-broker-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 13px;
+}
+
+.trx-gold-premium .trx-broker-heading > span {
+  color: #d2c4a9;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.trx-gold-premium .trx-broker-heading small {
+  color: #777166;
+  font-size: 9px;
+}
+
+.trx-gold-premium .trx-broker-logos {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.trx-gold-premium .trx-broker-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+  height: 48px;
+  padding: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 10px;
+  background: #f9f8f5;
+  transition: transform .2s, border-color .2s;
+}
+
+.trx-gold-premium .trx-broker-logo:hover {
+  transform: translateY(-3px);
+  border-color: #dba74c;
+}
+
+.trx-gold-premium .trx-broker-logo img {
+  display: block;
+  max-width: 100%;
+  max-height: 30px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* CTA */
+
+.trx-gold-premium .trx-cta-area {
+  margin-top: 23px;
+}
+
+.trx-gold-premium .trx-join-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  padding: 17px 19px;
+  border: 1px solid rgba(255,218,151,.45);
+  border-radius: 14px;
+  color: #21180d;
+  text-decoration: none;
+  background: linear-gradient(105deg, #ffd98a 0%, #f4b64e 48%, #f18a2d 100%);
+  box-shadow: 0 12px 30px rgba(221,135,35,.12);
+  transition: transform .25s, box-shadow .25s, filter .25s;
+}
+
+.trx-gold-premium .trx-join-button:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.04);
+  box-shadow: 0 17px 35px rgba(221,135,35,.22);
+}
+
+.trx-gold-premium .trx-join-button > span:first-child {
+  display: block;
+}
+
+.trx-gold-premium .trx-join-button small,
+.trx-gold-premium .trx-join-button strong {
+  display: block;
+}
+
+.trx-gold-premium .trx-join-button small {
+  margin-bottom: 5px;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  opacity: .75;
+}
+
+.trx-gold-premium .trx-join-button strong {
+  font-size: 14px;
+  font-weight: 850;
+}
+
+.trx-gold-premium .trx-join-arrow {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border: 1px solid rgba(40,25,8,.18);
+  border-radius: 12px;
+  background: rgba(255,255,255,.24);
+  font-size: 23px;
+  transition: transform .2s;
+}
+
+.trx-gold-premium .trx-join-button:hover .trx-join-arrow {
+  transform: translate(3px, -3px);
+}
+
+.trx-gold-premium .trx-cta-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+  color: #938a7d;
+  font-size: 9px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.trx-gold-premium .trx-cta-note span {
+  color: var(--trx-gold);
+}
+
+.trx-gold-premium .trx-risk-disclaimer {
+  margin: 19px 0 0;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,.07);
+  color: #827c72;
+  font-size: 9px;
+  line-height: 1.85;
+}
+
+.trx-gold-premium .trx-risk-disclaimer strong {
+  color: #c5b89f;
+}
+
+/* Responsive */
+
+@media (max-width: 1050px) {
+  .trx-gold-premium .trx-premium-grid {
+    gap: 48px;
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  }
+
+  .trx-gold-premium .trx-robot-stage {
+    min-height: 565px;
+    padding: 19px;
+  }
+
+  .trx-gold-premium .trx-robot-image {
+    height: 335px;
+  }
+
+  .trx-gold-premium .trx-float-left {
+    left: -15px;
+  }
+
+  .trx-gold-premium .trx-float-right {
+    right: -13px;
+  }
+}
+
+@media (max-width: 820px) {
+  .trx-gold-premium {
+    padding: 75px 22px 85px;
+  }
+
+  .trx-gold-premium .trx-premium-heading {
+    margin-bottom: 43px;
+  }
+
+  .trx-gold-premium .trx-premium-grid {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 620px;
+    margin: 0 auto;
+    gap: 48px;
+  }
+
+  .trx-gold-premium .trx-robot-stage {
+    min-height: 580px;
+  }
+
+  .trx-gold-premium .trx-robot-image {
+    max-width: 360px;
+    height: 365px;
+  }
+
+  .trx-gold-premium .trx-details-top h3 {
+    font-size: 32px;
+  }
+
+  .trx-gold-premium .trx-metric > strong {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trx-gold-premium {
+    padding: 55px 16px 65px;
+  }
+
+  .trx-gold-premium .trx-premium-heading {
+    margin-bottom: 32px;
+  }
+
+  .trx-gold-premium .trx-eyebrow {
+    gap: 7px;
+    padding: 10px 12px;
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .trx-gold-premium .display-2 {
+    margin-top: 21px;
+    font-size: 37px;
+    letter-spacing: -1.4px;
+  }
+
+  .trx-gold-premium .trx-heading-description {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .trx-gold-premium .trx-premium-grid {
+    gap: 38px;
+  }
+
+  .trx-gold-premium .trx-robot-stage {
+    min-height: 460px;
+    padding: 15px;
+    border-radius: 19px;
+  }
+
+  .trx-gold-premium .trx-stage-topline {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .trx-gold-premium .trx-stage-asset {
+    top: 67px;
+    left: 13px;
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .trx-gold-premium .trx-asset-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .trx-gold-premium .trx-stage-asset small {
+    font-size: 7px;
+  }
+
+  .trx-gold-premium .trx-stage-asset strong {
+    font-size: 8px;
+  }
+
+  .trx-gold-premium .trx-robot-image-wrap {
+    min-height: 330px;
+    padding: 45px 0 15px;
+  }
+
+  .trx-gold-premium .trx-robot-image {
+    height: 285px;
+  }
+
+  .trx-gold-premium .trx-image-caption {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .trx-gold-premium .trx-stage-bottom {
+    gap: 9px;
+    padding-top: 13px;
+  }
+
+  .trx-gold-premium .trx-stage-emblem {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .trx-gold-premium .trx-stage-title strong {
+    font-size: 13px;
+  }
+
+  .trx-gold-premium .trx-stage-title small {
+    font-size: 7px;
+    letter-spacing: .8px;
+  }
+
+  .trx-gold-premium .trx-stage-platform span {
+    padding: 6px 7px;
+    font-size: 9px;
+  }
+
+  .trx-gold-premium .trx-stage-platform small {
+    font-size: 7px;
+  }
+
+  .trx-gold-premium .trx-float-card {
+    gap: 7px;
+    padding: 8px;
+  }
+
+  .trx-gold-premium .trx-float-left {
+    top: 43%;
+    left: -5px;
+  }
+
+  .trx-gold-premium .trx-float-right {
+    right: -5px;
+    bottom: 21%;
+  }
+
+  .trx-gold-premium .trx-float-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+
+  .trx-gold-premium .trx-float-card strong {
+    font-size: 8px;
+  }
+
+  .trx-gold-premium .trx-float-card small {
+    font-size: 7px;
+  }
+
+  .trx-gold-premium .trx-details-top {
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .trx-gold-premium .trx-details-top h3 {
+    font-size: 27px;
+  }
+
+  .trx-gold-premium .trx-overline {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .trx-gold-premium .trx-status-pill {
+    gap: 6px;
+    padding: 8px;
+    font-size: 8px;
+  }
+
+  .trx-gold-premium .trx-description {
+    font-size: 12px;
+  }
+
+  .trx-gold-premium .trx-market-chip {
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .trx-gold-premium .trx-market-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 21px;
+  }
+
+  .trx-gold-premium .trx-market-name strong {
+    font-size: 13px;
+  }
+
+  .trx-gold-premium .trx-market-name small {
+    font-size: 9px;
+  }
+
+  .trx-gold-premium .trx-metrics-grid {
+    gap: 9px;
+  }
+
+  .trx-gold-premium .trx-metric {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .trx-gold-premium .trx-metric-icon {
+    width: 29px;
+    height: 29px;
+    font-size: 17px;
+  }
+
+  .trx-gold-premium .trx-metric > small {
+    font-size: 9px;
+  }
+
+  .trx-gold-premium .trx-metric > strong {
+    font-size: 17px;
+  }
+
+  .trx-gold-premium .trx-why {
+    padding: 15px;
+  }
+
+  .trx-gold-premium .trx-benefits {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .trx-gold-premium .trx-broker-logos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .trx-gold-premium .trx-broker-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .trx-gold-premium .trx-join-button {
+    padding: 14px;
+  }
+
+  .trx-gold-premium .trx-join-button strong {
+    font-size: 12px;
+  }
+
+  .trx-gold-premium .trx-join-arrow {
+    width: 37px;
+    height: 37px;
+  }
+}
+
+/* Respect accessibility preferences */
+@media (prefers-reduced-motion: reduce) {
+  .trx-gold-premium *,
+  .trx-gold-premium *::before,
+  .trx-gold-premium *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 </style>
 </head>
 <body>
 <script>
-const img = document.querySelector(".image-box img");
+/* affiliate banner tilt */
+(function(){
+  var img=document.querySelector(".image-box img");
+  if(!img)return;
+  document.addEventListener("mousemove",function(e){
+    var x=(window.innerWidth/2-e.pageX)/25;
+    var y=(window.innerHeight/2-e.pageY)/25;
+    img.style.transform="rotateY("+x+"deg) rotateX("+y+"deg)";
+  });
+})();
 
-document.addEventListener("mousemove", (e) => {
-  let x = (window.innerWidth / 2 - e.pageX) / 25;
-  let y = (window.innerHeight / 2 - e.pageY) / 25;
-
-  img.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
-});
-.image-box img {
-  border-radius: 25px; /* 🔥 corner curve */
-}
 </script>
 <!-- ══════════════════════════════════════
      LOADER
@@ -2580,7 +4335,7 @@ document.addEventListener("mousemove", (e) => {
     <div class="lring"></div>
     <div class="lring"></div>
   </div>
-  <div class="loader-logo"><img src="images/Copy2Boat Logo.png.svg" width="200"></img></span></div>
+  <div class="loader-logo"><img src="images/Copy2Boat Logo.png.svg" width="200"></img></div>
   <div class="loader-bar-wrap">
     <div class="loader-bar" id="loaderBar"></div>
   </div>
@@ -2599,7 +4354,8 @@ document.addEventListener("mousemove", (e) => {
      <li><a href="#">Home</a></li>
     <li><a href="#copybot">Copy Trading</a></li>
     <li><a href="#globalmap">Global Market</a></li>
-    <li><a href="#gold">AI Robot</a></li>
+    <li><a href="#gold">Gold</a></li>
+    <li><a href="#goldbot">AI Robot</a></li>
     <li><a href="#brokers">Brokers</a></li>
     <li><a href="#affiliate">Affiliate</a></li>
     <li><a href="#joincta">Help / Support</a></li>
@@ -2617,7 +4373,8 @@ document.addEventListener("mousemove", (e) => {
 <div class="mob-menu" id="mobMenu">
   <a href="#copybot" onclick="closeM()">Copy Trading</a>
   <a href="#globalmap" onclick="closeM()">Global Market</a>
-  <a href="#gold" onclick="closeM()">Gold &amp; Markets</a>
+  <a href="#gold" onclick="closeM()">Gold</a>
+  <a href="#goldbot" onclick="closeM()">AI Robot</a>
   <a href="#brokers" onclick="closeM()">Brokers</a>
   <a href="#affiliate" onclick="closeM()">Affiliate</a>
   <a href="#joincta" onclick="closeM()">Join</a>
@@ -2867,143 +4624,268 @@ document.addEventListener("mousemove", (e) => {
       </div>
     </div>
 
-    <!-- Upcoming markets -->
-    <h3 class="display-3 reveal" style="text-align:center;margin-top:78px;margin-bottom:10px">Explore a World of <em>Liquid Markets</em> and <EM>Emerging Opportunities</EM></h3>
-    <p class="lead reveal" style="text-align:center;margin-bottom:34px">While our Gold AI lead the industry in precision, we are constantly expanding your horizons.</p>
-    <div class="upcoming-row">
-      <div class="uc glass glass-top live reveal big-card">
-
-  <div class="uc-icon">
-    <img src="images/gold.png">
   </div>
+</section>
 
-  <div class="uc-name">Gold</div>
-  <span class="status s-live">● Live Now</span>
 
-  <div class="uc-desc">XAUUSD • Highest accuracy AI bot</div>
+<!-- COPY2BOT | PREMIUM TRX GOLD ROBOT -->
+<section id="goldbot" class="section trx-gold-premium">
+  <div class="trx-premium-bg-glow"></div>
+  <div class="trx-premium-grid-lines"></div>
 
-<div class="info-box">
-  <div class="info-item">💰 Min Investment: <b>$1000</b></div>
-  <div class="info-item">📈 Monthly ROI: <b>25.60%</b></div>
-  <div class="info-item">📉 Drawdown: <b>Low</b></div>
-  <div class="info-item">🎯 Win Rate: <b>92%</b></div>
-  <div class="info-item">👥 Copiers: <b>850+</b></div>
-  <div class="info-item">⚙ Platform: <b>MT5</b></div>
-</div>
-<div class="why-ai">
+  <div class="section-inner trx-premium-inner">
 
-  <div class="why-title">Why Choose AI Bot?</div>
+    <!-- SECTION HEADING -->
+    <div class="trx-premium-heading reveal">
+      <div class="trx-eyebrow">
+        <span class="trx-live-dot"></span>
+        COPY2BOT <span class="trx-eyebrow-separator">/</span>
+        AI TRADING TECHNOLOGY
+      </div>
 
-  <div class="why-list">
-    <div class="why-item">🤖 Advanced AI Trading</div>
-    <div class="why-item">🛡 Risk Managed Strategy</div>
-    <div class="why-item">📊 Proven Results</div>
-    <div class="why-item">⏱ 24/7 Auto Trading</div>
-  </div>
+      <h2 class="display-2">
+        Meet the <em>TRX Gold Robot</em>
+      </h2>
 
-</div>
-  <div class="broker-logos">
-    <img src="images/exness.jpeg">
-    <img src="images/xm.png">
-    <img src="images/icmarket.png">
-    <img src="images/octa.png">
-    <img src="images/roboforex.jpg">
-  </div>
+      <p class="trx-heading-description">
+        Intelligent automation. Gold market focus.
+        A next-generation trading experience built around XAUUSD
+        and compatible MetaTrader 5 accounts.
+      </p>
 
-  <button class="join-btn">Join Now</button>
+      <div class="trx-heading-divider">
+        <span></span><i>✦</i><span></span>
+      </div>
+    </div>
 
-</div>
-<div class="uc glass glass-top reveal big-card">
+    <div class="trx-premium-grid">
 
-  <div class="uc-icon">
-    <img src="images/crypto.png">
-  </div>
+      <!-- LEFT: ROBOT SHOWCASE -->
+      <div class="trx-robot-stage reveal left">
 
-  <div class="uc-name">Crypto</div>
-  <span class="status s-soon">⏳ Coming Soon</span>
+        <div class="trx-stage-topline">
+          <span><i class="trx-status-dot"></i> ROBOT SHOWCASE</span>
+          <span class="trx-stage-version">TRX / 01</span>
+        </div>
 
-  <div class="uc-desc">BTC, ETH • 24/7 AI trading bot</div>
+        <div class="trx-stage-orbit trx-orbit-one"></div>
+        <div class="trx-stage-orbit trx-orbit-two"></div>
+        <div class="trx-stage-glow"></div>
 
-  <!-- 🔥 INFO BOX -->
-<div class="info-box">
-  <div class="info-item">💰 Min Investment: <b>$1000</b></div>
-  <div class="info-item">📈 Monthly ROI: <b>25.60%</b></div>
-  <div class="info-item">📉 Drawdown: <b>Low</b></div>
-  <div class="info-item">🎯 Win Rate: <b>92%</b></div>
-  <div class="info-item">👥 Copiers: <b>850+</b></div>
-  <div class="info-item">⚙ Platform: <b>MT5</b></div>
-</div>
-<div class="why-ai">
+        <div class="trx-stage-asset">
+          <span class="trx-asset-icon">◆</span>
+          <div>
+            <small>PRIMARY MARKET</small>
+            <strong>GOLD / XAUUSD</strong>
+          </div>
+        </div>
 
-  <div class="why-title">Why Choose AI Bot?</div>
+        <div class="trx-robot-image-wrap">
+          <div class="trx-image-halo"></div>
 
-  <div class="why-list">
-    <div class="why-item">🤖 Advanced AI Trading</div>
-    <div class="why-item">🛡 Risk Managed Strategy</div>
-    <div class="why-item">📊 Proven Results</div>
-    <div class="why-item">⏱ 24/7 Auto Trading</div>
-  </div>
+          <img
+            class="trx-robot-image"
+            src="images/trx-gold-robot.png"
+            alt="TRX Gold AI Robot by Copy2Bot"
+            onerror="this.onerror=null;this.src='images/gold.png';"
+          />
 
-</div>
-  <!-- 🔹 Broker logos -->
-  <div class="broker-logos">
-    <img src="images/exness.jpeg">
-    <img src="images/xm.png">
-    <img src="images/icmarket.png">
-    <img src="images/octa.png">
-    <img src="images/roboforex.jpg">
-  </div>
+          <div class="trx-image-caption">
+            <span class="trx-caption-line"></span>
+            <span>PRECISION MEETS TECHNOLOGY</span>
+          </div>
+        </div>
 
-  <button class="join-btn">Notify Me</button>
+        <div class="trx-stage-bottom">
+          <div class="trx-stage-emblem">✦</div>
+          <div class="trx-stage-title">
+            <strong>TRX <span>GOLD</span></strong>
+            <small>AI TRADING ROBOT</small>
+          </div>
+          <div class="trx-stage-platform">
+            <span>MT5</span>
+            <small>PLATFORM</small>
+          </div>
+        </div>
 
-</div>
-<div class="uc glass glass-top reveal big-card">
+        <div class="trx-float-card trx-float-left">
+          <span class="trx-float-icon">⌁</span>
+          <div>
+            <strong>Market Insights</strong>
+            <small>Strategy-driven analysis</small>
+          </div>
+        </div>
 
-  <div class="uc-icon">
-    <img src="images/indices.png">
-  </div>
+        <div class="trx-float-card trx-float-right">
+          <span class="trx-float-icon">◈</span>
+          <div>
+            <strong>Risk Controls</strong>
+            <small>Configurable parameters</small>
+          </div>
+        </div>
+      </div>
 
-  <div class="uc-name">Currency Pairs</div>
-  <span class="status s-soon">⏳ Coming Soon</span>
+      <!-- RIGHT: ROBOT DETAILS -->
+      <div class="trx-details reveal right">
 
-  <div class="uc-desc">EURUSD, GBPJPY, USDJPY • High accuracy AI bot</div>
+        <div class="trx-details-top">
+          <div>
+            <span class="trx-overline">FEATURED AUTOMATION</span>
+            <h3>TRX Gold <span>AI</span></h3>
+          </div>
 
-  <!-- 🔥 INFO BOX -->
-  <div class="info-box">
-    <div>💰 Min Investment: <b>$500</b></div>
-    <div>📈 Monthly ROI: <b>18–25%</b></div>
-    <div>📉 Drawdown: <b>Low</b></div>
-    <div>🎯 Win Rate: <b>90%</b></div>
-    <div>👥 Copiers: <b>500+</b></div>
-    <div>⚙ Platform: <b>MT5</b></div>
-  </div>
-<div class="why-ai">
+          <div class="trx-status-pill">
+            <span class="trx-live-dot"></span>
+            <span>GOLD ROBOT</span>
+          </div>
+        </div>
 
-  <div class="why-title">Why Choose AI Bot?</div>
+        <p class="trx-description">
+          Explore a strategy-driven Gold trading solution with
+          compatible MT5 platform support, configurable parameters
+          and a workflow designed around your trading setup.
+        </p>
 
-  <div class="why-list">
-    <div class="why-item">🤖 Advanced AI Trading</div>
-    <div class="why-item">🛡 Risk Managed Strategy</div>
-    <div class="why-item">📊 Proven Results</div>
-    <div class="why-item">⏱ 24/7 Auto Trading</div>
-  </div>
+        <!-- MARKET CARD -->
+        <div class="trx-market-chip">
+          <div class="trx-market-icon">Au</div>
 
-</div>
-  <!-- 🔹 Broker logos -->
-  <div class="broker-logos">
-    <img src="images/exness.jpeg">
-    <img src="images/xm.png">
-    <img src="images/icmarket.png">
-    <img src="images/octa.png">
-    <img src="images/roboforex.jpg">
-  </div>
+          <div class="trx-market-name">
+            <strong>XAUUSD</strong>
+            <small>Gold against the US Dollar</small>
+          </div>
 
-  <button class="join-btn">Notify Me</button>
+          <div class="trx-market-right">
+            <span class="trx-market-label">MARKET</span>
+            <strong>GOLD</strong>
+          </div>
+        </div>
 
-</div>
+        <!-- METRICS -->
+        <div class="trx-metrics-heading">
+          <span>ROBOT OVERVIEW</span>
+          <span>KEY DETAILS</span>
+        </div>
+
+        <div class="trx-metrics-grid">
+          <div class="trx-metric">
+            <div class="trx-metric-top">
+              <span class="trx-metric-icon">＄</span>
+              <span class="trx-metric-index">01</span>
+            </div>
+            <small>Minimum Investment</small>
+            <strong>$1,000</strong>
+          </div>
+
+          <div class="trx-metric">
+            <div class="trx-metric-top">
+              <span class="trx-metric-icon">↗</span>
+              <span class="trx-metric-index">02</span>
+            </div>
+            <small>Reported Monthly ROI</small>
+            <strong>25.60%</strong>
+          </div>
+
+          <div class="trx-metric">
+            <div class="trx-metric-top">
+              <span class="trx-metric-icon">◎</span>
+              <span class="trx-metric-index">03</span>
+            </div>
+            <small>Reported Win Rate</small>
+            <strong>92%</strong>
+          </div>
+
+          <div class="trx-metric">
+            <div class="trx-metric-top">
+              <span class="trx-metric-icon">⌘</span>
+              <span class="trx-metric-index">04</span>
+            </div>
+            <small>Trading Platform</small>
+            <strong>MetaTrader 5</strong>
+          </div>
+        </div>
+
+        <!-- BENEFITS -->
+        <div class="trx-why">
+          <div class="trx-why-heading">
+            <span class="trx-why-star">✦</span>
+            <div>
+              <h4>Built Around Your Trading Workflow</h4>
+              <p>Technology, compatibility and control.</p>
+            </div>
+          </div>
+
+          <div class="trx-benefits">
+            <div><span>✓</span> Strategy-driven analysis</div>
+            <div><span>✓</span> Configurable risk settings</div>
+            <div><span>✓</span> Compatible MT5 workflow</div>
+            <div><span>✓</span> Broker compatibility checks</div>
+          </div>
+        </div>
+
+        <!-- BROKER LOGOS -->
+        <div class="trx-broker-area">
+          <div class="trx-broker-heading">
+            <span>EXPLORE BROKER OPTIONS</span>
+            <small>Verify compatibility before use</small>
+          </div>
+
+          <div class="trx-broker-logos">
+            <div class="trx-broker-logo">
+              <img src="images/exness.jpeg" alt="Exness"
+                   onerror="this.parentElement.style.display='none'">
+            </div>
+            <div class="trx-broker-logo">
+              <img src="images/xm.png" alt="XM"
+                   onerror="this.parentElement.style.display='none'">
+            </div>
+            <div class="trx-broker-logo">
+              <img src="images/icmarket.png" alt="IC Markets"
+                   onerror="this.parentElement.style.display='none'">
+            </div>
+            <div class="trx-broker-logo">
+              <img src="images/octa.png" alt="Octa"
+                   onerror="this.parentElement.style.display='none'">
+            </div>
+            <div class="trx-broker-logo">
+              <img src="images/roboforex.jpg" alt="RoboForex"
+                   onerror="this.parentElement.style.display='none'">
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="trx-cta-area">
+          <a href="#joincta" class="trx-join-button">
+            <span>
+              <small>DISCOVER THE TECHNOLOGY</small>
+              <strong>Explore TRX Gold Robot</strong>
+            </span>
+            <span class="trx-join-arrow">↗</span>
+          </a>
+
+          <div class="trx-cta-note">
+            <span>◈</span>
+            Check platform compatibility and understand the risks.
+          </div>
+        </div>
+
+        <p class="trx-risk-disclaimer">
+          <strong>Risk Disclosure:</strong>
+          Trading involves substantial risk, including loss of capital.
+          Reported ROI and win-rate figures must be independently verified
+          and are not guarantees of future results.
+        </p>
+
+      </div>
     </div>
   </div>
 </section>
+
+<!-- ══════════════════════════════════════
+     COMING SOON MARKETS
+══════════════════════════════════════ -->
+
 
 <!-- ══════════════════════════════════════
      BROKERS
@@ -3047,8 +4929,6 @@ document.addEventListener("mousemove", (e) => {
 
 </div>
   </div>
-
-</div>
 </section>
 
 <!-- ══════════════════════════════════════
@@ -3102,7 +4982,8 @@ document.addEventListener("mousemove", (e) => {
       <div class="reveal right image-box">
   <img src="images/affiliate-banner.png" alt="Affiliate Program" style="border-radius:10px;">
 </div>
-</div>
+    </div><!-- /aff-grid -->
+
  <!-- Milestones -->
   <div class="section-gray">
     <div class="mile-box reveal" style="margin-top:50px">
@@ -3148,6 +5029,7 @@ document.addEventListener("mousemove", (e) => {
 
 </div>
 </div>
+  </div><!-- /section-gray -->
 
 
     <!-- AFFILIATE PROCESS GRAPHICAL -->
@@ -3166,8 +5048,9 @@ document.addEventListener("mousemove", (e) => {
       <div class="aff-connector">→</div>
       <div class="aff-step"><div class="aff-circle"><img src="images/earn.png" width="80"><div class="aff-num">5</div></div><h5>Earn $10 Instantly</h5><p>$10 credited immediately. Withdraw to bank or UPI any time.</p></div>
     </div>
-</div>
-   
+  </div>
+</section>
+
 <!-- ══════════════════════════════════════
      TESTIMONIALS
 ══════════════════════════════════════ -->
@@ -3229,9 +5112,9 @@ document.addEventListener("mousemove", (e) => {
         <div class="join-phone">
           <div style="font-size:2.2rem"><img src="images/call.png" width="50"></img></div>
           <div>
-            <div class="eyebrow" style="margin-bottom:4px">Speak to an Expert</div>
-            <div style="font-family:'DM Serif Display',serif;font-size:1.2rem">+91 7588813527</div>
-            <div class="body-sm" style="margin-top:2px">Mon–Sat · 9 AM to 8 PM IST</div>
+            <div class="eyebrow" style="margin-bottom:4px">Contact to an Expert</div>
+            <div style="font-family:'DM Serif Display',serif;font-size:1.2rem">support@copy2bot.com</div>
+            
           </div>
         </div>
       </div>
@@ -3302,7 +5185,6 @@ document.addEventListener("mousemove", (e) => {
       <a href="#" class="nav-logo" style="display:inline-flex">
         
         <img src="images/Copy2Boat Logo.png.svg" width="200"></img></a>
-      </a>
       <p>World's most trusted AI-powered copy trading consultancy. Helping investors achieve financial freedom through intelligent automation since 2017. Specialising in Gold, Silver, Crypto &amp; Indices.</p>
       <div class="social-row">
         <a href="#" class="soc"><img src="images/Instagram_icon.png"></img></a>
@@ -3457,12 +5339,6 @@ function calcE(){
   document.getElementById('crval').textContent='$'+(r*10).toLocaleString();
 }
 
-/* ════════════ FORM ════════════ */
-function subForm(e){
-  e.preventDefault();
-  document.getElementById('jformEl').style.display='none';
-  document.getElementById('fsuccess').style.display='block';
-}
 
 /* ════════════ AI CHAT ════════════ */
 const aiPop=document.getElementById('aiPop');
@@ -3491,154 +5367,34 @@ function changeBotSlide(){
 setInterval(changeBotSlide, 3000);
 
 </script>
-<script src="https://unpkg.com/three@0.155.0/build/three.min.js"></script>
-<script src="https://unpkg.com/three-globe"></script>
 
 <script>
-const container = document.getElementById('globe-container');
-
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / 500, 0.1, 1000);
-camera.position.z = 250;
-
-const renderer = new THREE.WebGLRenderer({ antialias: true });
-renderer.setSize(window.innerWidth, 500);
-container.appendChild(renderer.domElement);
-
-const Globe = new ThreeGlobe()
-  .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
-  .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
-  .pointsData([
-    { lat: 20.5937, lng: 78.9629 },
-    { lat: 25.276987, lng: 55.296249 },
-    { lat: 51.5074, lng: -0.1278 },
-    { lat: 37.7749, lng: -122.4194 },
-    { lat: -33.8688, lng: 151.2093 }
-  ])
-  .pointColor(() => '#00ff88')
-  .pointAltitude(0.02)
-  .pointRadius(0.5);
-
-scene.add(Globe);
-
-const light = new THREE.AmbientLight(0xffffff);
-scene.add(light);
-
-function animate(){
-  requestAnimationFrame(animate);
-  Globe.rotation.y += 0.002;
-  renderer.render(scene, camera);
-}
-
-animate();
-<script>
-document.addEventListener("DOMContentLoaded", function(){
-
-const container = document.getElementById('globe-container');
-
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / 500, 0.1, 1000);
-camera.position.z = 250;
-
-const renderer = new THREE.WebGLRenderer({ antialias: true });
-renderer.setSize(window.innerWidth, 500);
-container.appendChild(renderer.domElement);
-
-const Globe = new ThreeGlobe()
-  .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
-  .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
-  .pointsData([
-    { lat: 20.5937, lng: 78.9629 },
-    { lat: 25.276987, lng: 55.296249 }
-  ])
-  .pointColor(() => '#00ff88');
-
-scene.add(Globe);
-
-const light = new THREE.AmbientLight(0xffffff);
-scene.add(light);
-
-function animate(){
-  requestAnimationFrame(animate);
-  Globe.rotation.y += 0.002;
-  renderer.render(scene, camera);
-}
-
-animate();
-
-});
-<script>
-let slides = document.querySelectorAll(".bot-slide");
-let index = 0;
-
-setInterval(() => {
-  slides[index].classList.remove("active");
-  slides[index].classList.add("prev");
-
-  index = (index + 1) % slides.length;
-
-  slides[index].classList.add("active");
-}, 8000);
-<script>
-  function subForm(e) {
-    e.preventDefault();
-
-    let firstName = document.querySelector('input[placeholder="Rajesh"]').value;
-    let lastName = document.querySelector('input[placeholder="Kumar"]').value;
-    let email = document.querySelector('input[type="email"]').value;
-    let phone = document.querySelector('input[type="tel"]').value;
-    let interest = document.querySelector('select').value;
-    let message = document.querySelector('textarea').value;
-
-    let whatsappMessage = `Hello, I want to join Copy2Boat.%0A
-Name: ${firstName} ${lastName}%0A
-Email: ${email}%0A
-Phone: ${phone}%0A
-Interest: ${interest}%0A
-Message: ${message}`;
-
-    let whatsappNumber = "919689827518"; // 👉 तुझा नंबर टाक
-
-    let url = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-    window.open(url, '_blank');
-
-    document.getElementById("jformEl").style.display = "none";
-    document.getElementById("fsuccess").style.display = "block";
-  }
-</script>
-</script>
-</script>
-</script>
-<script>
+/* ════════════ JOIN FORM → WHATSAPP ════════════ */
 function subForm() {
-
-  var fname = document.getElementById("fname").value;
-  var lname = document.getElementById("lname").value;
-  var email = document.getElementById("email").value;
-  var phoneInput = document.getElementById("phone").value;
+  var fname = document.getElementById("fname").value.trim();
+  var lname = document.getElementById("lname").value.trim();
+  var email = document.getElementById("email").value.trim();
+  var phoneInput = document.getElementById("phone").value.trim();
   var interest = document.getElementById("interest").value;
-  var message = document.getElementById("message").value;
+  var message = document.getElementById("message").value.trim();
 
-  // simple validation
-  if(fname === "" || phoneInput === "") {
+  if (fname === "" || phoneInput === "") {
     alert("Please fill your name and phone number");
     return;
   }
 
-  var phone = "917588813527"; // 👉 तुझा WhatsApp नंबर
+  var phone = "917588813527";
+  var text =
+"Hello, I want to join Copy2Boat.\n\n" +
+"Name: " + fname + " " + lname + "\n" +
+"Email: " + email + "\n" +
+"Phone: " + phoneInput + "\n" +
+"Interest: " + interest + "\n" +
+"Message: " + message;
 
-  var text = 
-`Hello, I want to join Copy2Boat.
-
-Name: ${fname} ${lname}
-Email: ${email}
-Phone: ${phoneInput}
-Interest: ${interest}
-Message: ${message}`;
-
-  var url = "https://api.whatsapp.com/send?phone=" + phone + "&text=" + encodeURIComponent(text);
-
-  window.open(url, "_self");
+  window.open("https://api.whatsapp.com/send?phone=" + phone + "&text=" + encodeURIComponent(text), "_blank");
+  document.getElementById("jformEl").style.display = "none";
+  document.getElementById("fsuccess").style.display = "block";
 }
 </script>
 </body>
